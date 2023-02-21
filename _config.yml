@@ -18,7 +18,7 @@ whitelist:
   - jekyll-redirect-from
 
 markdown: kramdown
-remote_theme: jekyll-bear-theme
+remote_theme: knhash/jekyllBear
 
 compress_html:
   clippings: all
