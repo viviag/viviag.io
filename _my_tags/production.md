@@ -1,4 +1,4 @@
 ---
 slug: production
-name: Case studies. Non-theoretical.
+name: Case studies. Non-theoretical
 ---

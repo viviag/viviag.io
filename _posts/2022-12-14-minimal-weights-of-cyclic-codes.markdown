@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Minimal weights of cyclic codes"
-tags: [math.GM]
+tags: [math-gm]
 usemathjax: true
 ---
 
