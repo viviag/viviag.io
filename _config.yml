@@ -7,12 +7,12 @@ description: Blog and entry point to my online appearance
 url: "https://viviag.io" # the base hostname & protocol for your site
 # host: 0.0.0.0
 
-
 #########################
 # more settings
 
 plugins:
   - jekyll-redirect-from
+  - jekyll/quicklatex
 
 whitelist:
   - jekyll-redirect-from

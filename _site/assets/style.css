@@ -275,40 +275,8 @@ ul.discover-posts li small a {
 
 
 @media (prefers-color-scheme: light) {
-    body {
-        background-color: #FFFFFF;
-        color: #000000;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    strong,
-    b {
-        color: #000000;
-    }
-
     a {
         color: #AA0000;
-    }
-
-    code {
-        background-color: #222222;
-    }
-
-    pre code {
-        color: #000000;
-    }
-
-    blockquote {
-        color: #111111;
-    }
-
-    .helptext {
-        color: #000000;
     }
 }
 
