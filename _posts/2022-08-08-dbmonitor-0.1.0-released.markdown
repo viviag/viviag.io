@@ -1,0 +1,37 @@
+---
+layout: post
+title: "dbmonitor-0.1.0 released!"
+tags: [software]
+---
+
+Initial release of a tool. See
+[https://hackage.haskell.org/package/dbmonitor](https://hackage.haskell.org/package/dbmonitor).
+
+This is a database consistency monitoring tool with Telegram alerts. See
+README on [hackage](https://hackage.haskell.org/package/dbmonitor).
+
+Its most advanced feature is a hot swap of any checks and configuration
+files. Key dependencies: async, fsnotify, hasql, telegram-bot-simple.
+
+Several usage scenarios I have in mind:
+
+1.  DBA or QA engineer uses corporate vpn and has direct access to
+    production or staging database from his working machine. He can
+    install dbmonitor, set it up for required databases, run it
+    (Unix-like systems case) via `dbmonitor > .monitor.log &` and add
+    line `@reboot dbmonitor > .monitor.log` to crontab. After that if he
+    has some suspicion he can add new check and he will instantly start
+    to receive alerts. It can be useful to find bugs related to
+    incorrect program termination or lack of ACID guarantees.
+2.  Same setting as 1. on a local machine of responsible developer who
+    want to perform long-term testing of corner cases before opening
+    merge request.
+3.  In MCCME we use it on a Kubernetes pod in a docker container. Hence
+    we do not use hot swap feature, but instrument still works for its
+    purpose and gains persistence, however is not as convenient in usage
+    as in case 1. We (credits to [Egor
+    Kuzmichev](https://github.com/aeifn)) provide docker image suitable
+    for this scenario.
+
+I appreciate any feedback here and in
+[issues](https://github.com/pandora-mccme/hdbmonitor/issues).
