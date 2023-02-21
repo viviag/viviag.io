@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Platonic Hask overview: introduction"
-tags: [Hask]
+tags: [hask]
 ---
 
 This post starts series of texts trying to explore category of Haskell
