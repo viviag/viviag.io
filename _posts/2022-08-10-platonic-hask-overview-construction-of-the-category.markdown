@@ -6,6 +6,8 @@ date:  2022-08-10 20:00 MSK
 usemathjax: true
 ---
 
+_[To index of the series](https://viviag.io/tagged/hask/)_
+
 Let's start with basic definition:
 
 ##### Definition

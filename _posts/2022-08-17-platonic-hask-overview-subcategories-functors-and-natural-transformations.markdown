@@ -5,6 +5,8 @@ tags: [hask]
 usemathjax: true
 ---
 
+_[To index of the series](https://viviag.io/tagged/hask/)_
+
 We have constructed the category of restricted Haskell types. There is
 nothing particularly useful in this construction yet. We need additional
 structure.

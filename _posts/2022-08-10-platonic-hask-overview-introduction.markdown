@@ -5,6 +5,8 @@ date:   2022-08-10 10:00 MSK
 tags: [hask]
 ---
 
+_[To index of the series](https://viviag.io/tagged/hask/)_
+
 This post starts series of texts trying to explore category of Haskell
 types seen without impredicativity (platonic Hask).
 
