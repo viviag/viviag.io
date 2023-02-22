@@ -2,6 +2,7 @@
 layout: post
 title:  "Case study: asynchronous database calls"
 tags: [production]
+usemathjax: true
 ---
 
 This is a brief description of a problem setting and a solution adopted
