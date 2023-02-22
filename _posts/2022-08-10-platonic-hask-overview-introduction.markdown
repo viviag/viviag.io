@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Platonic Hask overview: introduction"
+date:   2022-08-10 10:00 MSK
 tags: [hask]
 ---
 
