@@ -108,7 +108,7 @@ For any category $$\mathrm{C}$$ and object $$A$$ there exist two functors.
 
 First --- $$\operatorname{Hom}(A,\_) :: \mathrm{C} \to Set$$ is a covariant functor, moving $$X$$ to $$\operatorname{Hom}(A,X)$$. Second --- contravariant $$\operatorname{Hom}(\_,A)$$ with same signature, moving $$X$$ to $$\operatorname{Hom}(X,A)$$.
 
-Both functors matters a lot for future constructions and obviously exist in $$Hask$$.
+Both functors matter a lot for future constructions and obviously exist in $$Hask$$.
 
 Morphisms --- functions between types, hence arrows `a -> b`. They are
 ordinary types, hence their prefix form is `(->) a b` and there can
