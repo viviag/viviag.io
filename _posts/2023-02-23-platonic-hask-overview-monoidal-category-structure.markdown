@@ -90,7 +90,7 @@ Universal properties allows us to construct dual objects by formally reversing a
 
 While doing it with already defined representing objects we obtain the following definitions:
 
-- Initial object is defined as an object $I$ such that it has unique morphism to any other object
+- Initial object is defined as an object $$I$$ such that it has unique morphism to any other object
 - Coproduct is defined by the following diagram:
 
 ![coprod](/assets/coprod.svg)
