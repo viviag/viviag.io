@@ -112,7 +112,7 @@ These universal objects with reversed arrows can be defined via duals to represe
 
 Functor $$F :: \mathrm{C} \to Set$$ is said to be **corepresentable** if is it naturally isomorphic to $$\operatorname{Hom}(A,\_)$$ for some $$A$$. $$A$$ is called **corepresenting object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
 
-Initial object corepresents $$\operatorname{Hom}(\emptyset, \_)$$, $$A \coprod B$$ corepresents $$\operatorname{Hom}(A,\_) \otimes \operatorname{Hom}(B,\_)$$, coexponential corepresents $$\operatorname{Hom}(A, \_ \coprod A)$$.
+Initial object corepresents $$\operatorname{Hom}(\emptyset, \_)$$, $$A \coprod B$$ corepresents $$\operatorname{Hom}(A,\_) \otimes \operatorname{Hom}(B,\_)$$, coexponential corepresents $$\operatorname{Hom}(B, \_ \coprod A)$$.
 
 In $$Hask$$ $$\operatorname{Hom}(A,\_)$$ is written as `(->) A`. We can restrict functors to instances of `Functor` type class and obtain the following definition of representable functor: functor `F` is said to be representable if there exists natural isomorphism between `F a` and `(->) A a` for every type `a`. `A` is corepresenting object of `F`. But `F` must be considered as a functor to Set with values --- sets of terms of resulting types of `Functor` we started with instead of types.
 
