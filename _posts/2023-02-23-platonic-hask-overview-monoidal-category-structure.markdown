@@ -25,7 +25,7 @@ Consider objects $$A,B \in \mathrm{C}$$. If functor $$\operatorname{Hom}(\_,A) \
 
 Write this definition: $$\forall Y\; Hom(Y, A \times B) \cong \operatorname{Hom}(Y,A) \times \operatorname{Hom}(Y,B)$$.
 
-Setting $$Y = A \times B$$ we obtain via this isomorphism pair of maps $$\pi_A :: A \times B \to A$$ and $$\pi_B :: A \times B \to B$$ which are images of $$Id_{A \times B}$$ under isomorphism. They are called **canonical projections**. For arbitrary $$Y$$ this isomorphism guarantees existence and uniqueness of map $$\phi :: Y \to A \times B$$ for any pair of maps $$\psi_A :: Y \to A$$ and $$\psi_B :: Y \to B$$. There are maps $$\pi_A \circ \phi$$ and $$\pi_B \circ \phi$$, since isomorphism is natural, $$\pi_A \circ \phi = \psi_A$$, $$\pi_B \circ \phi = \psi_B$$.
+By setting $$Y = A \times B$$ we obtain via this isomorphism pair of maps $$\pi_A :: A \times B \to A$$ and $$\pi_B :: A \times B \to B$$ which are image of $$Id_{A \times B}$$ under isomorphism. They are called **canonical projections**. For arbitrary $$Y$$ this isomorphism guarantees existence and uniqueness of map $$\phi :: Y \to A \times B$$ for any pair of maps $$\psi_A :: Y \to A$$ and $$\psi_B :: Y \to B$$. There are maps $$\pi_A \circ \phi$$ and $$\pi_B \circ \phi$$, since isomorphism is natural, $$\pi_A \circ \phi = \psi_A$$, $$\pi_B \circ \phi = \psi_B$$.
 
 Thus we obtain the universal property of a product:
 
