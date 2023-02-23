@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Platonic Hask overview: cartesian closedness and monoidal category structures"
+title:  "Platonic Hask overview: representable functors and monoidal category structures"
 tags: [hask]
 usemathjax: true
 ---
