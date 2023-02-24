@@ -21,3 +21,4 @@ I appreciate any focused discussion and will happily accept any correction I agr
 I write these texts mostly in order to reflect on professional experience, polish understanding of some things or share some mathematical path.
 
 Texts here are [licensed](LICENSE.html). In essense – use as you wish but provide reference.
+**Warning**: I edit everything here, any post can be seriously changed over time. If you want to refer to specific fixed version, please refer with respect to [commit history](https://github.com/viviag/viviag.io/commits/main).

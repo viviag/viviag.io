@@ -7,16 +7,14 @@ usemathjax: true
 
 _[To index of the series](https://viviag.io/tagged/hask/)_
 
-We have constructed the category of restricted Haskell types. There is
-nothing particularly useful in this construction yet. We need additional
-structure.
+We have constructed the category of restricted Haskell types. It gave us a coherent notion of a composition. But it's not enough. The major strength of Haskell is its separation of effects. So we need to be able at least to group types into objects with common property. Let's develop machinery to deal with it.
 
 Consider categories $$\mathrm{C}$$ and $$\mathrm{D}$$ with pair of mappings $$F_{\operatorname{Ob}} :: \operatorname{Ob}(\mathrm{C}) \to \operatorname{Ob}(\mathrm{D})$$ and $$F_{\operatorname{Hom}}$$ with one of the
 following signatures: $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ or $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(B),F_{\operatorname{Ob}}(A))$$ --- mapping of all morphisms of a category, defined on each Hom-set. $$F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})$$ represents mapping between categories.
 
 ##### Definitions
 
-$$F$$ is a called a **covariant functor** or **functor** if the following
+$$F$$ is called a **covariant functor** or **functor** if the following
 diagram commutes:
 
 ![functor](/assets/functor.svg)
@@ -37,9 +35,11 @@ Let $$F :: \mathrm{C} \to \mathrm{D}$$ be a functor (covariant, contravariant de
 If $$\forall A, B \in \mathrm{C}\; F_{\operatorname{Hom}} :: \operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ is injective, $$F$$ is called **faithful**. If surjective --- **full**. If
 bijective --- **fully faithful**.
 
+Categories $$\mathrm{C}$$ and $$\mathrm{D}$$ are said to be equivalent if there exists fully faithful functor $$F :: \mathrm{C} \to \mathrm{D}$$ such that every object of $$\mathrm{D}$$ is isomorphic to $$F(A)$$ for some $$A \in \operatorname{C}$$.
+
 We have constructed the category and consider its internal
 structure. Functors from category to itself are called **endofunctors**.
-However, it may be convenient to talk about subcategories in and about
+However, it may be convenient to talk about subcategories in $$Hask$$ and about
 functors to them.
 
 ##### Definition
@@ -57,7 +57,7 @@ Now let's take a look at functors in Hask.
 Consider declaration of new data type like
 `data Either a b = Left a | Right b`.
 
-There are several possible constructions of -endofunctor arising from this definition. Two most native (except $$Emb$$) are defined here:
+There are several possible constructions of $$Hask$$-endofunctor arising from this definition. Two most native are defined here:
 
 1. $$Left_{\operatorname{Ob}}(a :: a)$$ = `Left a`; $$Left_{\operatorname{Hom}}(f :: a \to c)$$ = `(\Left a -> Left (f a))`.
 2. $$Right_{\operatorname{Ob}}(a :: b)$$ = `Right a`; $$Right_{\operatorname{Hom}}(f :: b \to c)$$ = `(\Right a -> Right (f a))`.
@@ -65,7 +65,7 @@ There are several possible constructions of -endofunctor arising from this defin
 Both of them are well-defined covariant faithful functors in $$Hask$$.
 
 Moreover, each parametric type form a full subcategory in $$Hask$$, hence these
-functors can be considered as $$Hask \to Either$$. Or 2. can be considered as functor $$Hask \to Either\;a$$.
+functors can be considered as $$Hask \to Either$$. Or 2. can be considered as functor $$Hask \to Either\;a$$. And there are corresponding embedding functors to other direction.
 
 However, only $$Right$$ is supported by valid `Functor` instance in Haskell.
 Instance for `Either`:
@@ -104,6 +104,10 @@ $$ML_{\operatorname{Ob}}$$ = `maybeToList`;
 
 $$ML_{\operatorname{Hom}}$$ = `\f -> ``maybeToList`` . f . listToMaybe`.
 
+It's easy to check that functor $$toList :: Vector \to []$$ with similar definition makes subcategories of vectors and of lists equivalent.
+
+All three these functors are not endofunctors in $$Hask$$ since they are not everywhere defined.
+
 ##### Example: Hom-functors
 
 For any category $$\mathrm{C}$$ and object $$A$$ there exist two functors.
@@ -139,20 +143,13 @@ Laws of `Contravariant` form the following familiar diagram:
 
 ![haskcofunctor](/assets/hascofunctor.svg)
 
-##### Other useful examples
+Let's take a look at introduced structures. At the level of types we have types and morphisms between them. Morphisms can be surjective, injective or bijective, in last case they are isomorphisms. Now we turn to level of subcategories of $$Hask$$ and we have functors with their own properties. These properties are finer than propeties of Set-level morphisms but they are similar in spirit.
 
--   Forgetful functors from category to $$Set$$ --- ones forgetting all the
-    structure imposed on objects and morphisms. For example, forgetful
-    functor from category of groups $$Grp$$ moves group to set of its elements
-    and homomorphism to itself as a function between sets.
--   Free functors from $$Set$$ to some category --- ones which allow to impose
-    defining relations of a category on a set and thus define free
-    object in a category. For example, free functor from $$Set$$ to $$Grp$$ yields the
-    group called free with presentation $$set \mapsto \{set\;|\;\emptyset\}$$.
--   Tensor product with fixed object (left or right).
--   To say it out --- basic example is identity functor.
+At the moment we can take one of two steps:
+1. Broad: try to introduce some category of subcategories of $$Hask$$ and explore it. Probably more than one if we want to take care of contravariant functors.
+2. Deep: try to stack the next layer and define morphisms between functors.
 
-All these examples will appear not only in $$Hask$$, but in Haskell.
+For now we follow the second path.
 
 ##### Definition
 
@@ -179,12 +176,12 @@ close to its user interface for a long time. Here is how it was used:
 
 ##### Statement
 
-Functors (covariant without loss of generality) between tho categories $$\mathrm{C}$$ and $$\mathrm{C}$$ with objects --- functors and morphisms --- natural transformations form a category.
+Functors (covariant without loss of generality) between tho categories $$\mathrm{C}$$ and $$\mathrm{D}$$ with objects --- functors and morphisms --- natural transformations form a category.
 
 This is well-known statement not about $$Hask$$ with obvious proof by construction, so it will not be given.
 
 Note that in example above $$LM \circ ML = Id_{Maybe}$$.
 
-This category of functors is denoted as $$\operatorname{Fun}(C,D)$$. $$\operatorname{Fun}(C,C)$$ has a more convenient synonym --- $$\operatorname{End}(C)$$.
+This category of functors is denoted as $$\operatorname{Fun}(\mathrm{C},\mathrm{D})$$. $$\operatorname{Fun}(\mathrm{C},\mathrm{C})$$ has a more convenient synonym --- $$\operatorname{End}(\mathrm{C})$$ and is called category of endofunctors of $$\mathrm{C}$$.
 
 We come up with another notable object we will use in the future --- category $$\operatorname{End}(Hask)$$ of endofunctors of $$Hask$$.

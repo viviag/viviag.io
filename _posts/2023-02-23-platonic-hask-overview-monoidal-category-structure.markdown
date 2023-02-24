@@ -7,6 +7,8 @@ usemathjax: true
 
 _[To index of the series](https://viviag.io/tagged/hask/)_
 
+In previous post I promised to justify change of signature of `fmap` from `(a -> b) -> f a -> f b` from `Prelude` to `(a -> b) -> (f a -> f b)`. And occasionally explain the former notation. There is a categorical construction to help, it is called Cartesian closedness.
+
 Here we leave indices of $$\operatorname{Hom}$$-sets to context, same for definitions of objects --- each subsection operates fixed category.
 
 #### Cartesian closedness
@@ -49,11 +51,11 @@ To prove the statement in the header we have to demonstrate terminal object, exp
 
 Since morphisms in $$Hask$$ do not have to preserve any structure the only candidates for terminal object are types with single term. These are types isomorphic to `()`. They are all isomorphic (admit invertible bijections between each other), hence there is no need to check universality.
 
-Evaluation map of exponential object suggests object satisfying universal property for types `a, b` --- it is `a -> b`. Products are given by type with two natural projections --- `(a,b)`.
+Evaluation map of exponential object suggests object satisfying universal property for types `a, b` --- it is `a -> b`. Products are given by type with two natural projections --- `(a,b)`. Since universal objects are defined up to natural isomorphisms, product types `data Cons = Cons B C` are also products, same for newtypes over arrow types etc.
 
 Definition of exponential object gives us a natural isomorphism `(a,b) -> c` $$\cong$$ `a -> (b -> c)` for any types `a, b, c`. This isomorphism is called currying. In Haskell it is common and is reflected in both implementation and notation --- type `a -> b -> c` is literally equivalent to `a -> (b -> c)` (which is known as partial evaluation) and is isomorphic to `(a,b) -> c` via inverse functions `curry` and `uncurry`.
 
-There is an important proposition that any cartesian closed category is closed symmetric monoidal category with tensor product given by product in sense of given universal property. Closedness is incapsulated into existence of all exponentials. So let's proceed to definition of symmetric monoidal category.
+There is an important proposition that any cartesian closed category is closed symmetric monoidal category with tensor product given by product in sense of given universal property. Closedness is encapsulated into existence of all exponentials. So let's proceed to definition of symmetric monoidal category.
 
 #### Monoidal category structure
 
