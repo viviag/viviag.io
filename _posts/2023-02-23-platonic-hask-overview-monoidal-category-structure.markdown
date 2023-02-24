@@ -7,7 +7,7 @@ usemathjax: true
 
 _[To index of the series](https://viviag.io/tagged/hask/)_
 
-In previous post I promised to justify change of signature of `fmap` from `(a -> b) -> f a -> f b` from `Prelude` to `(a -> b) -> (f a -> f b)`. And occasionally explain the former notation. There is a categorical construction to help, it is called Cartesian closedness.
+In previous post I promised to justify change of signature of `fmap` from `(a -> b) -> f a -> f b` from `Prelude` to `(a -> b) -> (f a -> f b)`. And occasionally explain the former notation. There is a categorical notion to help, it is called Cartesian closedness.
 
 Here we leave indices of $$\operatorname{Hom}$$-sets to context, same for definitions of objects --- each subsection operates fixed category.
 
