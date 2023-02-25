@@ -143,6 +143,23 @@ Laws of `Contravariant` form the following familiar diagram:
 
 ![haskcofunctor](/assets/hascofunctor.svg)
 
+##### Other useful examples of functors
+
+-   Forgetful functors from category to $$Set$$ --- ones forgetting all the
+    structure imposed on objects and morphisms. For example, forgetful
+    functor from category of groups $$Grp$$ moves group to set of its elements
+    and homomorphism to itself as a function between sets.
+-   Free functors from $$Set$$ to some category --- ones which allow to impose
+    defining relations of a category on a set and thus define free
+    object in a category. For example, free functor from $$Set$$ to $$Grp$$ yields the
+    group called free with presentation $$set \mapsto \{set\;|\;\emptyset\}$$.
+-   Tensor product with fixed object (left or right).
+-   To say it out --- basic example is identity functor.
+
+All these functors are relevant to $$Hask$$.
+
+
+
 Let's take a look at introduced structures. At the level of types we have types and morphisms between them. Morphisms can be surjective, injective or bijective, in last case they are isomorphisms. Now we turn to level of subcategories of $$Hask$$ and we have functors with their own properties. These properties are finer than propeties of Set-level morphisms but they are similar in spirit.
 
 At the moment we can take one of two steps:

@@ -55,7 +55,11 @@ Evaluation map of exponential object suggests object satisfying universal proper
 
 Definition of exponential object gives us a natural isomorphism `(a,b) -> c` $$\cong$$ `a -> (b -> c)` for any types `a, b, c`. This isomorphism is called currying. In Haskell it is common and is reflected in both implementation and notation --- type `a -> b -> c` is literally equivalent to `a -> (b -> c)` (which is known as partial evaluation) and is isomorphic to `(a,b) -> c` via inverse functions `curry` and `uncurry`.
 
-There is an important proposition that any cartesian closed category is closed symmetric monoidal category with tensor product given by product in sense of given universal property. Closedness is encapsulated into existence of all exponentials. So let's proceed to definition of symmetric monoidal category.
+There is an important proposition that any cartesian closed category is closed symmetric monoidal category with tensor product given by product in sense of given universal property.
+
+Closedness (informally) means that homsets can be considered as objects of the category. Again informally we can see it from existence of exponentials --- their elements are functions from `a` to `b`, elements of $$Hom$$-sets are morphisms from `a` to `b`. Term `closed monoidal category` encapsulates some compatibility condition between tensor product and exponentials. Rigorous definitions and a proof of the claimed proposition worth a separate post which will be written.
+
+So let's proceed to definition of symmetric monoidal category.
 
 #### Monoidal category structure
 
