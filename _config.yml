@@ -12,6 +12,7 @@ url: "https://viviag.io" # the base hostname & protocol for your site
 
 plugins:
   - jekyll-redirect-from
+  - jekyll/antex
 
 whitelist:
   - jekyll-redirect-from

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.10)  25 FEB 2023 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2021.5.10)  25 FEB 2023 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**.antex-cache/992ed8b7bd6f36937ee82e14ed868ad7.tex
-(./.antex-cache/992ed8b7bd6f36937ee82e14ed868ad7.tex
+**.antex-cache/b0edde1c9c11c9eb62f99d1dafca7e04.tex
+(./.antex-cache/b0edde1c9c11c9eb62f99d1dafca7e04.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -438,22 +438,60 @@ zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 \snippet=\box58
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 
-! TeX capacity exceeded, sorry [input stack size=5000].
-<to be read again> 
-                   \expandafter 
-l.7 \begin{lrbox}{\snippet}\begin\end
-                                     {lrbox}
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
 
- 
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+\file=\write4
+\openout4 = `b0edde1c9c11c9eb62f99d1dafca7e04.yml'.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
+\l__pdf_internal_box=\box59
+\g__pdf_backend_object_int=\count279
+\l__pdf_backend_content_box=\box60
+\l__pdf_backend_model_box=\box61
+\g__pdf_backend_annotation_int=\count280
+\g__pdf_backend_link_int=\count281
+\g__pdf_backend_link_sf_int=\count282
+)
+(.antex-cache/b0edde1c9c11c9eb62f99d1dafca7e04.aux)
+\openout1 = `b0edde1c9c11c9eb62f99d1dafca7e04.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+ABD: EveryShipout initializing macros [1
+
+]
+(.antex-cache/b0edde1c9c11c9eb62f99d1dafca7e04.aux) ) 
 Here is how much of TeX's memory you used:
- 12461 strings out of 482658
- 246737 string characters out of 5957864
- 462640 words of memory out of 5000000
- 27309 multiletter control sequences out of 15000+600000
- 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 12638 strings out of 482658
+ 251233 string characters out of 5957864
+ 477084 words of memory out of 5000000
+ 27463 multiletter control sequences out of 15000+600000
+ 534037 words of font info for 32 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 5000i,0n,4995p,426b,95s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+ 60i,5n,60p,426b,103s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on .antex-cache/b0edde1c9c11c9eb62f99d1dafca7e04.dvi (1 page, 90
+00 bytes).
