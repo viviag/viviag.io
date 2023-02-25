@@ -54,6 +54,7 @@ Unfortunately, I cannot add any sensible row to this section yet.
 ### Various sites
 
 -   [GitHub](https://github.com/viviag)
+-   [Reddit](https://www.reddit.com/user/vitalii_guzeev/)
 -   [Codewars](https://www.codewars.com/users/viviag)
 -   [Travel map](https://3pulse.com/Viviag/map)
 
