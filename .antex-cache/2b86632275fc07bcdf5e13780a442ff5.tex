@@ -1,0 +1,16 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{mathtools, amssymb}
+\usepackage{tikz}
+
+\newsavebox\snippet
+\begin{lrbox}{\snippet}$n$\end{lrbox}
+\newwrite\file
+\immediate\openout\file=\jobname.yml
+\immediate\write\file{em: \the\dimexpr1em}
+\immediate\write\file{ex: \the\dimexpr1ex}
+\immediate\write\file{ht: \the\ht\snippet}
+\immediate\write\file{dp: \the\dp\snippet}
+\immediate\write\file{wd: \the\wd\snippet}
+\closeout\file
+\begin{document}\usebox{\snippet}\end{document}
