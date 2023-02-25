@@ -19,7 +19,7 @@ data P3 = P3 a b c
 ```
 This type is naturally isomorphic to `(a,b,c)` and is an example of product type.
 
-Dually $$Hask$$ has all finite coproducts, which follows from existence of `Either`. Again from monoidal structure $$(Hask, Either, Void)$$ we derive that parens-free notation is legal.
+Dually $$Hask$$ has all finite coproducts (initial object is set to be empty coproduct), which follows from existence of `Either`. Again from monoidal structure $$(Hask, Either, Void)$$ we derive that parens-free notation is legal.
 
 In Haskell coproducts are written as
 ```haskell
