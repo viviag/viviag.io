@@ -73,3 +73,5 @@ For category of finite sets this construction yields semiring of natural numbers
 We have also just shown that objects in $$Hask$$ as a symmetric monoidal category with finite coproducts form a commutative semiring.
 
 So Haskell types do. This construction seems to me a good answer to question why algebraic types are algebraic.
+
+Actually we have not constructed algebraic types since we excluded recursive types. And there is a valid question if given semigroup structure extends to the whole class of algebraic types. But we did not rely on nature of elements while proving general statement, so there is nothing to raise a problem. Recursive types deserve at least a separate post.
