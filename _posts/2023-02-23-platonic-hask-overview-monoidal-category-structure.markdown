@@ -110,7 +110,7 @@ Category with initial object, all coexponentials and all binary coproducts is ca
 $$Hask$$ does not have all coexponentials and is not cocartesian coclosed.
 
 But it has all coproducts given by `Either a b` and it has initial object `Void`.
-This data is enough to equip $$Hask$$ with another structure of monoidal category. Tensor product is given by coproduct and unit is given by initial object. Denote this structure as $$(Hask, Either, Void)$$.
+This data is enough to equip $$Hask$$ with another structure of symmetric (since coproducts are symmetric) monoidal category. Tensor product is given by coproduct and unit is given by initial object. Denote this structure as $$(Hask, Either, Void)$$.
 
 #### Note on corepresentable functors
 

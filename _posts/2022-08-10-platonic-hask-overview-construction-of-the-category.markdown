@@ -80,6 +80,6 @@ $$Hask$$ is not equivalent to Set. Here is the [Reference](https://www.reddit.co
 I will frequently use the following notation:
 - `f :: A` for element $$f$$ of $$A \in \operatorname{Ob}(Hask)$$
 - `f :: A -> B` for $$f \in \operatorname{Hom}_{Hask}(A,B)$$
-This notation is inspired by Haskell and is convenient even more generally outside of $$Hask$$.
+This notation is inspired by Haskell and is convenient even more generally outside of $$Hask$$. Second one will be then formally justified.
 
 It is also common to denote $$Hom_{\mathrm{C}}(A,A)$$ as $$End_{\mathrm{C}}(A)$$ --- set of endomorphisms of $$A$$.
