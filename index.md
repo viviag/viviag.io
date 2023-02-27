@@ -16,7 +16,7 @@ My current interests include:
 
 Please visit [links page](/links.html) of this website to see in more detail what I am doing.
 
-And I welcome you in my blog.
+And I welcome you in my [blog](/blog).
 I appreciate any focused discussion and will happily accept any correction I agree with.
 I write these texts mostly in order to reflect on professional experience, polish understanding of some things or share some mathematical path.
 
