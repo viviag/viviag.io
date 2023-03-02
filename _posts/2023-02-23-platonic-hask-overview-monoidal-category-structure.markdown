@@ -35,7 +35,7 @@ For any $$Y$$, $$f :: Y \to A$$ and $$g :: Y \to B$$ there exists map $$\phi :: 
 
 ![productprop](/assets/productprop.svg)
 
-Analogously we call representing object of a functor $$\operatorname{Hom}(\_, \emptyset)$$ **terminal object** of category $$\mathrm{C}$$. By evaluating its universal property we have that it is the object $$T$$ with exactly one morphism $$Y \to T$$ for any $$Y$$.
+Consider constant functor $$\overline{\{0\}}$$ moving all objects to a fixed singleton set and all morphisms to identity. We call representing object of $$\overline{\{0\}}$$ **terminal object** of category $$\mathrm{C}$$. By evaluating its universal property we have that it is the object $$T$$ with exactly one morphism $$Y \to T$$ for any $$Y$$.
 
 Assume $$\mathrm{C}$$ has all binary products. Consider functor $$\operatorname{Hom}(\_ \times A, B)$$. Its representing object $$B^A$$ is called **exponential object**. Actually we defined it via isomorphism $$\operatorname{Hom}(Y, B^A) \cong \operatorname{Hom}(Y \times A, B)$$ which may look familiar.
 
