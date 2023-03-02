@@ -65,13 +65,13 @@ Laws of monoidal categories we have built can be rewritten as follows:
 
 Distributivity gives us equation $$a \cdot (b + c) = a \cdot b + a \cdot c$$.
 
-For any object $$a$$ consider $$0 \cdot a$$. **Proposition:** it satisfies universal property of initial object.
-Proof by reference to [ncatlab: Proposition 2.2](https://ncatlab.org/nlab/show/distributive+category). Hence $$0 \cdot a = 0$$.
+**Proposition:** For any object $$a$$ $$0 \cdot a = 0$$. I.e. $$0 \cdot a$$ is an initial object.
+Proof by reference to [ncatlab: Proposition 2.2](https://ncatlab.org/nlab/show/distributive+category).
 
 For category of finite sets this construction yields semiring of natural numbers, as Qiaochu Yuan [points](https://math.stackexchange.com/questions/2582771/relationship-between-algebraic-data-types-and-the-set-of-real-numbers#comment5333054_2582817) out. This is an easy exercise and we can compare it with notation of finite ordinals used to compactly denote finite products at the start of the post.
 
-We have also just shown that objects in $$Hask$$ as a symmetric monoidal category with finite coproducts form a commutative semiring.
+We have also just shown that isomorphism classes of objects in $$Hask$$ as a symmetric monoidal category with finite coproducts form a commutative semiring.
 
-So Haskell types do. This construction seems to me a good answer to question why algebraic types are algebraic.
+So do Haskell types. This construction seems to me a good answer to question why algebraic types are algebraic.
 
 Actually we have not constructed algebraic types since we excluded recursive types. And there is a valid question if given semigroup structure extends to the whole class of algebraic types. But we did not rely on nature of elements while proving general statement, so there is nothing to raise a problem. Recursive types deserve at least a separate post.

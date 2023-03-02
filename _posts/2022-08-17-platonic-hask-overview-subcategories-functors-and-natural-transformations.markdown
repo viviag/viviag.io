@@ -7,10 +7,12 @@ usemathjax: true
 
 _[To index of the series](https://viviag.io/tagged/hask/)_
 
-We have constructed the category of restricted Haskell types. It gave us a coherent notion of a composition. But it's not enough. The major strength of Haskell is its separation of effects. So we need to be able at least to group types into objects with common property. Let's develop machinery to deal with it.
+We have constructed the category of restricted Haskell types. It gave us a coherent notion of a composition. But it's not enough. The major strength of Haskell is its separation of computations of different nature. So we need to be able at least to cluster types into objects with common property. Let's develop machinery to deal with it.
 
 Consider categories $$\mathrm{C}$$ and $$\mathrm{D}$$ with pair of mappings $$F_{\operatorname{Ob}} :: \operatorname{Ob}(\mathrm{C}) \to \operatorname{Ob}(\mathrm{D})$$ and $$F_{\operatorname{Hom}}$$ with one of the
-following signatures: $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ or $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(B),F_{\operatorname{Ob}}(A))$$ --- mapping of all morphisms of a category, defined on each Hom-set. $$F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})$$ represents mapping between categories.
+following signatures: $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ or $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(B),F_{\operatorname{Ob}}(A))$$ --- mapping of all morphisms of a category, defined on each Hom-set.
+
+We can construct a pair $$F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})$$. Its definition contains all data necessary to define map between categories. But composition of such maps is not well-defined (check it). It can be fixed by the following definitions:
 
 ##### Definitions
 
@@ -57,7 +59,7 @@ Now let's take a look at functors in Hask.
 Consider declaration of new data type like
 `data Either a b = Left a | Right b`.
 
-There are several possible constructions of $$Hask$$-endofunctor arising from this definition. Two most native are defined here:
+There are several possible constructions of $$Hask$$-endofunctor arising from this definition. Two most natural are defined here:
 
 1. $$Left_{\operatorname{Ob}}(a :: a)$$ = `Left a`; $$Left_{\operatorname{Hom}}(f :: a \to c)$$ = `(\Left a -> Left (f a))`.
 2. $$Right_{\operatorname{Ob}}(a :: b)$$ = `Right a`; $$Right_{\operatorname{Hom}}(f :: b \to c)$$ = `(\Right a -> Right (f a))`.

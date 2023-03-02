@@ -19,7 +19,7 @@ Category $$\mathrm{C}$$ is called **cartesian closed** if it has terminal object
 
 To define all relevant notions it is convenient (following [lectures in Russian by A. Gorodentsev](http://gorod.bogomolov-lab.ru/ps/stud/homalg/1920/list.html)) to define **representable functor**.
 
-Functor $$F :: \mathrm{C}^{op} \to Set$$ is said to be **representable** if is it naturally isomorphic to $$\operatorname{Hom}(\_,A)$$ for some $$A$$. $$A$$ is called **representing object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
+Functor $$F :: \mathrm{C}^{op} \to Set$$ is said to be **representable** if is it naturally isomorphic to $$\operatorname{Hom}(\_,A)$$ for some $$A$$. We call $$A$$ the **representing object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
 
 Any representing object has associated **universal property**. Let's see it by example.
 

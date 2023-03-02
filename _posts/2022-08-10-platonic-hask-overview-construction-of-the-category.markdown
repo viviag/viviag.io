@@ -75,11 +75,13 @@ Following posts will operate $$Hask$$.
 
 ##### Remark
 
-$$Hask$$ is not equivalent to Set. Here is the [Reference](https://www.reddit.com/r/haskell/comments/sz4ghr/comment/hy3916c/?utm_source=share&utm_medium=web2x&context=3).
+1. $$Hask$$ is not equivalent to Set. Here is the [Reference](https://www.reddit.com/r/haskell/comments/sz4ghr/comment/hy3916c/?utm_source=share&utm_medium=web2x&context=3).
 
-I will frequently use the following notation:
-- `f :: A` for element $$f$$ of $$A \in \operatorname{Ob}(Hask)$$
+2. It is also common to denote $$Hom_{\mathrm{C}}(A,A)$$ as $$End_{\mathrm{C}}(A)$$ --- set of endomorphisms of $$A$$.
+
+3. I will frequently use the following notation:
+- `f :: A` for term $$f$$ of $$A \in \operatorname{Ob}(Hask)$$
 - `f :: A -> B` for $$f \in \operatorname{Hom}_{Hask}(A,B)$$
-This notation is inspired by Haskell and is convenient even more generally outside of $$Hask$$. Second one will be then formally justified.
 
-It is also common to denote $$Hom_{\mathrm{C}}(A,A)$$ as $$End_{\mathrm{C}}(A)$$ --- set of endomorphisms of $$A$$.
+This notation is inspired by Haskell and is convenient even more generally outside of $$Hask$$.
+Second one will be then formally justified.
