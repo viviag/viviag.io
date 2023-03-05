@@ -9,7 +9,7 @@ _[To index of the series](https://viviag.io/tagged/hask/)_
 
 We have constructed the category of restricted Haskell types. It gave us a coherent notion of a composition. But it's not enough. The major strength of Haskell is its separation of computations of different nature. So we need to be able at least to cluster types into objects with common property. Let's develop machinery to deal with it.
 
-Consider categories $$\mathrm{C}$$ and $$\mathrm{D}$$ with pair of mappings $$F_{\operatorname{Ob}} :: \operatorname{Ob}(\mathrm{C}) \to \operatorname{Ob}(\mathrm{D})$$ and $$F_{\operatorname{Hom}}$$ with one of the
+Consider categories $$\mathrm{C}$$ and $$\mathrm{D}$$ with pair of mappings $$F_{\operatorname{Ob}} : \operatorname{Ob}(\mathrm{C}) \to \operatorname{Ob}(\mathrm{D})$$ and $$F_{\operatorname{Hom}}$$ with one of the
 following signatures: $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ or $$\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(B),F_{\operatorname{Ob}}(A))$$ --- mapping of all morphisms of a category, defined on each Hom-set.
 
 We can construct a pair $$F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})$$. Its definition contains all data necessary to define map between categories. But composition of such maps is not well-defined (check it). It can be fixed by the following definitions:
@@ -28,16 +28,16 @@ commutes:
 
 These two definitions are related to notion of **dual category** ---
 category $$\mathrm{C}^{op}$$ is constructed from $$\mathrm{C}$$ by formally reverting all arrows in a
-diagram of $$\mathrm{C}$$. This notion allows us to identify contravariant functor $$F :: \mathrm{C} \to \mathrm{D}$$ with covariant $$F^{op} :: \mathrm{C} \to \mathrm{D}^{op}$$.
+diagram of $$\mathrm{C}$$. This notion allows us to identify contravariant functor $$F : \mathrm{C} \to \mathrm{D}$$ with covariant $$F^{op} : \mathrm{C} \to \mathrm{D}^{op}$$.
 
 Here are several useful definitions:
 
-Let $$F :: \mathrm{C} \to \mathrm{D}$$ be a functor (covariant, contravariant definitions are similar). Consider $$F_{\operatorname{Hom}}$$.
+Let $$F : \mathrm{C} \to \mathrm{D}$$ be a functor (covariant, contravariant definitions are similar). Consider $$F_{\operatorname{Hom}}$$.
 
-If $$\forall A, B \in \mathrm{C}\; F_{\operatorname{Hom}} :: \operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ is injective, $$F$$ is called **faithful**. If surjective --- **full**. If
+If $$\forall A, B \in \mathrm{C}\; F_{\operatorname{Hom}} : \operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))$$ is injective, $$F$$ is called **faithful**. If surjective --- **full**. If
 bijective --- **fully faithful**.
 
-Categories $$\mathrm{C}$$ and $$\mathrm{D}$$ are said to be equivalent if there exists fully faithful functor $$F :: \mathrm{C} \to \mathrm{D}$$ such that every object of $$\mathrm{D}$$ is isomorphic to $$F(A)$$ for some $$A \in \operatorname{C}$$.
+Categories $$\mathrm{C}$$ and $$\mathrm{D}$$ are said to be equivalent if there exists fully faithful functor $$F : \mathrm{C} \to \mathrm{D}$$ such that every object of $$\mathrm{D}$$ is isomorphic to $$F(A)$$ for some $$A \in \operatorname{C}$$.
 
 We have constructed the category and consider its internal
 structure. Functors from category to itself are called **endofunctors**.
@@ -50,7 +50,7 @@ Category $$\mathrm{D}$$ is a subcategory of $$\mathrm{C}$$ if $$\operatorname{Ob
 
 If $$\forall A,B \in \operatorname{Ob}(\mathrm{D})\; \operatorname{Hom}_{\mathrm{D}}(A,B) = \operatorname{Hom}_{\mathrm{C}}(A,B)$$ $$\mathrm{D}$$ is called **full subcategory** of $$\mathrm{C}$$.
 
-Every subcategory gives rise to faithful embedding functor $$Emb :: \mathrm{D} \to \mathrm{C}$$ with identical actions both on objects and morphisms. If $$\mathrm{D}$$ is a full subcategory $$Emb$$ is fully faithful.
+Every subcategory gives rise to faithful embedding functor $$Emb : \mathrm{D} \to \mathrm{C}$$ with identical actions both on objects and morphisms. If $$\mathrm{D}$$ is a full subcategory $$Emb$$ is fully faithful.
 
 Now let's take a look at functors in Hask.
 
@@ -61,8 +61,8 @@ Consider declaration of new data type like
 
 There are several possible constructions of $$Hask$$-endofunctor arising from this definition. Two most natural are defined here:
 
-1. $$Left_{\operatorname{Ob}}(a :: a)$$ = `Left a`; $$Left_{\operatorname{Hom}}(f :: a \to c)$$ = `(\Left a -> Left (f a))`.
-2. $$Right_{\operatorname{Ob}}(a :: b)$$ = `Right a`; $$Right_{\operatorname{Hom}}(f :: b \to c)$$ = `(\Right a -> Right (f a))`.
+1. $$Left_{\operatorname{Ob}}(a : a)$$ = `Left a`; $$Left_{\operatorname{Hom}}(f : a \to c)$$ = `(\Left a -> Left (f a))`.
+2. $$Right_{\operatorname{Ob}}(a : b)$$ = `Right a`; $$Right_{\operatorname{Hom}}(f : b \to c)$$ = `(\Right a -> Right (f a))`.
 
 Both of them are well-defined covariant faithful functors in $$Hask$$.
 
@@ -93,7 +93,7 @@ question. Since it's not a question of category theory, let me refer to
 Yet another restriction on Haskell `Functor` typeclass is that it does
 not allow functors between nontrivial subcategories of $$Hask$$.
 
-Example of such a functor: $$LM :: [] \to Maybe$$;
+Example of such a functor: $$LM : [] \to Maybe$$;
 
 $$LM_{\operatorname{Ob}}$$ = [listToMaybe](https://hackage.haskell.org/package/base-4.17.0.0/docs/Data-Maybe.html#v:listToMaybe);
 
@@ -106,7 +106,7 @@ $$ML_{\operatorname{Ob}}$$ = `maybeToList`;
 
 $$ML_{\operatorname{Hom}}$$ = `\f -> ``maybeToList`` . f . listToMaybe`.
 
-It's easy to check that functor $$toList :: Vector \to []$$ with similar definition makes subcategories of vectors and of lists equivalent.
+It's easy to check that functor $$toList : Vector \to []$$ with similar definition makes subcategories of vectors and of lists equivalent.
 
 All three these functors are not endofunctors in $$Hask$$ since they are not everywhere defined.
 
@@ -114,7 +114,7 @@ All three these functors are not endofunctors in $$Hask$$ since they are not eve
 
 For any category $$\mathrm{C}$$ and object $$A$$ there exist two functors.
 
-First --- $$\operatorname{Hom}(A,\_) :: \mathrm{C} \to Set$$ is a covariant functor, moving $$X$$ to $$\operatorname{Hom}(A,X)$$. Second --- contravariant $$\operatorname{Hom}(\_,A)$$ with same signature, moving $$X$$ to $$\operatorname{Hom}(X,A)$$.
+First --- $$\operatorname{Hom}(A,\_) : \mathrm{C} \to Set$$ is a covariant functor, moving $$X$$ to $$\operatorname{Hom}(A,X)$$. Second --- contravariant $$\operatorname{Hom}(\_,A)$$ with same signature, moving $$X$$ to $$\operatorname{Hom}(X,A)$$.
 
 Both functors matter a lot for future constructions and obviously exist in $$Hask$$.
 
@@ -173,7 +173,7 @@ For now we follow the second path.
 ##### Definition
 
 Consider $$F,G$$, --- covariant functors from $$\mathrm{C}$$ to $$\mathrm{D}$$. We will call family $$\eta$$ of
-morphisms in $$\mathrm{D}$$ **natural transformation** from $$F$$ to $$G$$ if for any object $$X$$ in $$\operatorname{Ob}(C)$$ and morphism $$f :: X \to Y$$ there exist morphisms $$\eta_X :: F(X) \to G(X)$$ and $$\eta_Y :: F(Y) \to G(Y)$$ in $$\mathrm{D}$$ such that $$\forall f \in \operatorname{Hom}_{\mathrm{C}}(X,Y)$$ the following diagram commutes:
+morphisms in $$\mathrm{D}$$ **natural transformation** from $$F$$ to $$G$$ if for any object $$X$$ in $$\operatorname{Ob}(C)$$ and morphism $$f : X \to Y$$ there exist morphisms $$\eta_X : F(X) \to G(X)$$ and $$\eta_Y : F(Y) \to G(Y)$$ in $$\mathrm{D}$$ such that $$\forall f \in \operatorname{Hom}_{\mathrm{C}}(X,Y)$$ the following diagram commutes:
 
 ![natural](/assets/natural.svg)
 

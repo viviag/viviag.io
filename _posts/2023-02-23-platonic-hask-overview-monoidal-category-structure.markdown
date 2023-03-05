@@ -19,7 +19,7 @@ Category $$\mathrm{C}$$ is called **cartesian closed** if it has terminal object
 
 To define all relevant notions it is convenient (following [lectures in Russian by A. Gorodentsev](http://gorod.bogomolov-lab.ru/ps/stud/homalg/1920/list.html)) to define **representable functor**.
 
-Functor $$F :: \mathrm{C}^{op} \to Set$$ is said to be **representable** if is it naturally isomorphic to $$\operatorname{Hom}(\_,A)$$ for some $$A$$. We call $$A$$ the **representing object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
+Functor $$F : \mathrm{C}^{op} \to Set$$ is said to be **representable** if is it naturally isomorphic to $$\operatorname{Hom}(\_,A)$$ for some $$A$$. We call $$A$$ the **representing object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
 
 Any representing object has associated **universal property**. Let's see it by example.
 
@@ -27,11 +27,11 @@ Consider objects $$A,B \in \mathrm{C}$$. If functor $$\operatorname{Hom}(\_,A) \
 
 Write this definition: $$\forall Y\; Hom(Y, A \times B) \cong \operatorname{Hom}(Y,A) \times \operatorname{Hom}(Y,B)$$.
 
-By setting $$Y = A \times B$$ we obtain via this isomorphism pair of maps $$\pi_A :: A \times B \to A$$ and $$\pi_B :: A \times B \to B$$ which are image of $$Id_{A \times B}$$ under isomorphism. They are called **canonical projections**. For arbitrary $$Y$$ this isomorphism guarantees existence and uniqueness of map $$\phi :: Y \to A \times B$$ for any pair of maps $$\psi_A :: Y \to A$$ and $$\psi_B :: Y \to B$$. There are maps $$\pi_A \circ \phi$$ and $$\pi_B \circ \phi$$, since isomorphism is natural, $$\pi_A \circ \phi = \psi_A$$, $$\pi_B \circ \phi = \psi_B$$.
+By setting $$Y = A \times B$$ we obtain via this isomorphism pair of maps $$\pi_A : A \times B \to A$$ and $$\pi_B : A \times B \to B$$ which are image of $$Id_{A \times B}$$ under isomorphism. They are called **canonical projections**. For arbitrary $$Y$$ this isomorphism guarantees existence and uniqueness of map $$\phi : Y \to A \times B$$ for any pair of maps $$\psi_A : Y \to A$$ and $$\psi_B : Y \to B$$. There are maps $$\pi_A \circ \phi$$ and $$\pi_B \circ \phi$$, since isomorphism is natural, $$\pi_A \circ \phi = \psi_A$$, $$\pi_B \circ \phi = \psi_B$$.
 
 Thus we obtain the universal property of a product:
 
-For any $$Y$$, $$f :: Y \to A$$ and $$g :: Y \to B$$ there exists map $$\phi :: Y \to A \times B$$ such that the following diagram commutes:
+For any $$Y$$, $$f : Y \to A$$ and $$g : Y \to B$$ there exists map $$\phi : Y \to A \times B$$ such that the following diagram commutes:
 
 ![productprop](/assets/productprop.svg)
 
@@ -39,7 +39,7 @@ Consider constant functor $$\overline{\{0\}}$$ moving all objects to a fixed sin
 
 Assume $$\mathrm{C}$$ has all binary products. Consider functor $$\operatorname{Hom}(\_ \times A, B)$$. Its representing object $$B^A$$ is called **exponential object**. Actually we defined it via isomorphism $$\operatorname{Hom}(Y, B^A) \cong \operatorname{Hom}(Y \times A, B)$$ which may look familiar.
 
-By taking $$Y = B^A$$ we obtain map $$eval :: B^A \times A \to B$$. We can draw the universal property:
+By taking $$Y = B^A$$ we obtain map $$eval : B^A \times A \to B$$. We can draw the universal property:
 
 ![expprop](/assets/expprop.svg)
 
@@ -66,7 +66,7 @@ So let's proceed to definition of symmetric monoidal category.
 ##### Definitions
 
 Category $$\mathrm{C}$$ is called **monoidal** if
-- It is equipped with **tensor product** bifunctor $$\otimes :: \mathrm{C} \times \mathrm{C} \to \mathrm{C}$$ and associator functor $$\alpha :: \mathrm{C} \to \mathrm{C}$$ satisfying associative law.
+- It is equipped with **tensor product** bifunctor $$\otimes : \mathrm{C} \times \mathrm{C} \to \mathrm{C}$$ and associator functor $$\alpha : \mathrm{C} \to \mathrm{C}$$ satisfying associative law.
 - There exists unit object $$I$$ and unitor functors $$\lambda$$, $$\rho$$ satisfying identity law.
 - Both associator and unitor maps are natural isomorphisms where defined.
 
@@ -78,7 +78,7 @@ Identity law is the commutativity of the following diagram:
 
 ![monid](/assets/monid.svg)
 
-Monoidal category is called **symmetric** if $$\forall A,B$$ there exists isomorphism $$s_{AB} :: A \otimes B \to B \otimes A$$ such that the following diagram commutes:
+Monoidal category is called **symmetric** if $$\forall A,B$$ there exists isomorphism $$s_{AB} : A \otimes B \to B \otimes A$$ such that the following diagram commutes:
 
 ![monsym](/assets/monsym.svg)
 
@@ -116,7 +116,7 @@ This data is enough to equip $$Hask$$ with another structure of symmetric (since
 
 These universal objects with reversed arrows can be defined via duals to representable functors.
 
-Functor $$F :: \mathrm{C} \to Set$$ is said to be **corepresentable** if is it naturally isomorphic to $$\operatorname{Hom}(A,\_)$$ for some $$A$$. $$A$$ is called **corepresenting object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
+Functor $$F : \mathrm{C} \to Set$$ is said to be **corepresentable** if is it naturally isomorphic to $$\operatorname{Hom}(A,\_)$$ for some $$A$$. $$A$$ is called **corepresenting object** of functor $$F$$. Representing object is unique up to canonical isomorphism.
 
 Initial object corepresents $$\operatorname{Hom}(\emptyset, \_)$$, $$A \coprod B$$ corepresents $$\operatorname{Hom}(A,\_) \otimes \operatorname{Hom}(B,\_)$$, coexponential corepresents $$\operatorname{Hom}(B, \_ \coprod A)$$.
 
