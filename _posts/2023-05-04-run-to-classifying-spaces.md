@@ -147,10 +147,10 @@ For instance, $$\mathbb{Z}_2$$is represented by diagram of example 1,
 denote it by $$\mathcal{D}_{\mathcal{Z}_2}$$.
 We see (given the last exercise) that $$B\mathbb{Z}_2 = B\mathcal{D}_{\mathcal{Z}_2}$$.
 
-There is a general fact that $$BG \simeq B\mathcal{D}_G$$. It is approachable within the technique given in this text.
+There is a general fact that $$BG \simeq B\mathcal{D}_G$$. It is approachable within the technique given in this text. Almost. Up to the fact that classifying space is unique up to (weak) homotopy.
 
 __Last exercise:__ Prove independently from this fact that $$B\mathcal{D}_{\mathcal{Z}}$$ is homotopy-equivalent to a circle.<br>
-This proof may require some methods which were not mentioned in the text.
+This proof may also require some methods which were not mentioned in the text.
 
 #### Questions
 
