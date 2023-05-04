@@ -24,9 +24,14 @@ __Exercise__: play with conditions of the definition and check what it matches p
 
 Convex hull of $$k+1$$ ($$k \leq n$$) vertices is called a _geometric simplex_. It is a polytope. If its set of vertices does not coincide with initial set of vertices, a simplex is called degenerate, otherwise we say that a simplex has dimension $$k$$.
 
-Each polytope can be decomposed into union of convex polytopes --- convex hulls of some vertices. We could admit it as a definition, but anyways where is something to think about. Each point in a convex hull of set $$V \subset \mathbb{R}^n$$ lies in a convex hull of some subset $$W \subset V$$ of cardinality at most $$n+1$$, i.e. in a simplex. This statement is called the Carathéodory's theorem and it gives us a decomposition of a polytope into a union of simplices of dimension at most $$n$$. This decomposition (simplicial decomposition/triangulation) has two good properties: all faces of simplices lie in a polytope and simplices intersect at faces (__Exercise__: prove it).
+Each polytope can be decomposed into union of convex polytopes intersecting at faces. We could admit it as a definition, but anyways where is something to think about. Each convex polytope is a convex hull of its vertices $$V$$. Each point in a convex hull of set $$V \subset \mathbb{R}^n$$ lies in a convex hull of some subset $$W \subset V$$ of cardinality at most $$n+1$$, i.e. in a simplex. This statement is called the Carathéodory's theorem. It gives us a decomposition of a polytope into a union of simplices of dimension at most $$n$$. This decomposition (simplicial decomposition/triangulation) has two good properties: all faces of simplices lie in a polytope and simplices intersect at faces.
 
 Hence by triangulation of a polytope we obtain a first example of a _geometric simplicial complex_ --- union of simplices satisfying two conditions at the end of the last paragraph.  
+
+__Exercise:__. Details of a decomposition using Caratheodory's theorem:
+1. Let $$V$$ be a set and $$W \subset V$$. Then $$Conv(W) \subset Conv(V)$$. Hence union of simplices arising from Caratheodory's theorem is equal to $$Conv(V)$$.
+2. Assume simplices $$A$$ and $$B$$ intersect. Then either their intersection is a common face of them or at least one of the vertices of $$A$$ and $$B$$ is internal to $$A \cup B$$.
+3. See that the latter case contradicts our choice of set $$V$$.
 
 We can observe that our geometric simplicial complex is only defined by vertices of its faces. Hence we can abstract from geometry here and define an abstract _simplicial complex_. Let $$X$$ be a finite set and $$\mathcal{P}(X)$$ be its powerset. Then $$S \subset \mathcal{P}(X)$$ is called an abstract simplicial complex if for any $$V \in S$$ and $$W \subset V$$ $$W \in S$$. Elements of $$S$$ are called simplices, number of elements in a simplex minus one is called its dimension.
 
