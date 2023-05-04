@@ -28,7 +28,7 @@ Each polytope can be decomposed into union of convex polytopes intersecting at f
 
 Hence by triangulation of a polytope we obtain a first example of a _geometric simplicial complex_ --- union of simplices satisfying two conditions at the end of the last paragraph.  
 
-__Exercise:__. Details of a decomposition using Caratheodory's theorem:
+__Exercise:__ Details of a decomposition using Caratheodory's theorem:
 1. Let $$V$$ be a set and $$W \subset V$$. Then $$Conv(W) \subset Conv(V)$$. Hence union of simplices arising from Caratheodory's theorem is equal to $$Conv(V)$$.
 2. Assume simplices $$A$$ and $$B$$ intersect. Then either their intersection is a common face of them or at least one of the vertices of $$A$$ and $$B$$ is internal to $$A \cup B$$.
 3. See that the latter case contradicts our choice of set $$V$$.
