@@ -135,7 +135,7 @@ We need some other technique to see some classifying spaces at hand. Classifying
 
 Every topological space $$X$$ has its group of transformations $$\operatorname{End}(X)$$. Let $$\rho : G \to \operatorname{End}(X)$$ be a homomorphism. It is called a group action.
 
-Let's endow $$G$$ with a topology. For example, every group can be supplied with discrete topology --- we declare each subset of $$G$$ to be open. Then we can fix an arbitrary point $$x \in X$$ and consider its orbit under continuous action of $$G$$. This orbit is embedded into $$X$$ via continuous map.<br>
+Let's endow $$G$$ with a topology. For example, every group can be supplied with discrete topology --- we declare each subset of $$G$$ to be open. Then we can fix an arbitrary point $$x \in X$$ and consider its orbit under continuous (as a map $$G \times X \to X$$) action of $$G$$. This orbit is embedded into $$X$$ via continuous map.<br>
 __Exercise__: If two orbits of an action have a common point, they coincide.
 
 By exercise, we see that being in a same orbit is an equivalence relation. Hence we can take quotient of $$X$$ by it.
