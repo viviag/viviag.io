@@ -7,7 +7,7 @@ usemathjax: true
 
 I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of "a classifying space of a category".
 
-My friend has mathematical education and knows is familiar with algebra, discrete optimization and real analysis, but he had never had any course in topology and does not work as a mathematician. I tried to sketch a path to the subject. At the end we agreed that an exercise sheet would support it a lot.
+My friend has mathematical education and is familiar with algebra, discrete optimization and real analysis, but he had never had any course in topology and does not work as a mathematician. I tried to sketch a path to the subject. At the end we agreed that an exercise sheet would support it a lot.
 
 So here is this sketch of a path towards classifying spaces, extended and supplied with exercises. Let's run.
 
