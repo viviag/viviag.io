@@ -133,7 +133,7 @@ We need some other technique to see some classifying spaces at hand. Classifying
 
 ## Classifying spaces of groups
 
-Every topological space $$X$$ has its group of transformations $$\operatorname{End}(X)$$. Let $$\rho : G \to \operatorname{End}(X)$$ be a homomorphism. It is called a group action.
+Every topological space $$X$$ has its group of continuous transformations $$\operatorname{End}(X)$$. Let $$\rho : G \to \operatorname{End}(X)$$ be a homomorphism. It is called a group action.
 
 Let's endow $$G$$ with a topology. For example, every group can be supplied with discrete topology --- we declare each subset of $$G$$ to be open. Then we can fix an arbitrary point $$x \in X$$ and consider its orbit under continuous (as a map $$G \times X \to X$$) action of $$G$$. This orbit is embedded into $$X$$ via continuous map.<br>
 __Exercise__: If two orbits of an action have a common point, they coincide.
@@ -144,7 +144,7 @@ We did not discuss a quotient topology yet: sets that have an open preimage unde
 If $$X=EG$$ is a contractible space with an action of $$G$$, this quotient $$BG$$ is called a classifying space of a group $$G$$.
 
 __Exercise__: Let $$G = \mathbb{Z}_2$$ and $$EG = S^{\infty}$$. Describe action $$G \hookrightarrow \operatorname{End}{EG}$$ and its quotient space.<br>
-__Exercise__: What is the classifying space of $$\mathbb{Z}$$.
+__Exercise__: What is the classifying space of $$\mathbb{Z}$$?
 
 By looking at this action on a contractible space, it is easy to catch how group can be represented as a category --- we have a single homotopically trivial object with different endomorphisms indexed by elements of a group. By drawing it we come up with a category with one object and morphisms indexed by elements of a group.
 
