@@ -37,7 +37,7 @@ We can observe that our geometric simplicial complex is only defined by vertices
 
 We can also define a _geometric realization_ which maps points of $$X$$ to points in Euclidean space of appropriate dimension in such a way that each simplex maps into geometric simplex of the same dimension. There can be plenty of geometric realizations, the most commonly referred to is a standard geometric realization, which maps simplices to regular polytopes.
 
-Finally, let $$(P,\leq)$$ be a finite partially ordered set (poset). We can construct an abstract simplicial complex by taking chains of length $$n+1$$ to be $$n$$-simplices (ignoring order). Note that equalities are excluded from this construction.<br>
+Finally, let $$(P,\leq)$$ be a finite partially ordered set (poset). We can construct an abstract simplicial complex by taking chains of length $$n+1$$ to be $$n$$-simplices. Note that equalities are excluded from this construction.<br>
 __Exercise__: check that it is a simplicial complex.<br>
 This complex is called an order complex of a poset. We denote its geometric realization as $$BP$$.
 
