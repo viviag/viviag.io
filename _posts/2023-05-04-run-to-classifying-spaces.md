@@ -37,7 +37,7 @@ We can observe that our geometric simplicial complex is only defined by vertices
 
 We can also define a _geometric realization_ which maps points of $$X$$ to points in Euclidean space of appropriate dimension in such a way that each simplex maps into geometric simplex of the same dimension. There can be plenty of geometric realizations, the most commonly referred to is a standard geometric realization, which maps simplices to regular polytopes.
 
-Finally, let $$(P,\leq)$$ be a finite partially ordered set (poset). We can construct an abstract simplicial complex by taking chains of length $$n+1$$ to be $$n$$-simplices. Note that equalities are excluded from this construction.<br>
+Finally, let $$(P,\leq)$$ be a finite partially ordered set (poset). We can construct an abstract simplicial complex by taking chains of length $$n+1$$ to be $$n$$-simplices (ignoring order). Note that equalities are excluded from this construction.<br>
 __Exercise__: check that it is a simplicial complex.<br>
 This complex is called an order complex of a poset. We denote its geometric realization as $$BP$$.
 
@@ -47,14 +47,14 @@ Any order relation satisfies two properties: $$a \leq b;\; b \leq c$$ imply $$a 
 
 Let's introduce a definition: a (small) category is a set called a set of objects with sets $$\operatorname{Hom}(A,B)$$ (homsets) of arrows between objects $$A$$ and $$B$$ for each pair $$(A,B)$$. The following two properties must be satisfied: for each pair of arrows $$f : A \to B$$ and $$B \to C$$ there exists an arrow $$g \circ f : A \to C$$ and for each object $$A$$ there exists an arrow $$Id_A : A \to A$$.
 
-Each poset forms a category with $$P$$ being a set of objects and arrows between objects $$a$$ and $$b$$ present if and only if $$a \leq b$$. This category has a property that each homset has at most one element. Order complex construction remains valid on this category simply by change of terms --- we replace chains of length $$n+1$$ with sequences of morphisms of length $$n+1$$, excluding identities. A result of this general construction is called a nerve of a category.
+Each poset forms a category with $$P$$ being a set of objects and arrows between objects $$a$$ and $$b$$ present if and only if $$a \leq b$$. This category has a property that each homset has at most one element. Order complex construction remains valid on this category simply by change of terms --- we replace chains of length $$n+1$$ with sequences of composable morphisms of length $$n+1$$, excluding identities. The only change is that we do not forget an orientation. A result of this general construction is called a nerve of a category.
 
 Categories with finite sets of objects and finite sets of morphisms can be displayed as diagrams. Consider some examples (compositions and identity arrows are omitted):<br>
 1. ![twocycle](/assets/twocycle.svg)
 2. ![onecycle](/assets/onecycle.svg)
 3. ![multipath](/assets/multipath.svg)
 
-All of them have more than one sequence on the same set of objects. Hence nerves of these categories cannot be represented as simplicial complexes. But they have geometric realizations defined by similar construction and comprised of geometric simplices and their continuous deformations. Objects like these are called simplicial sets. Let's think of them exactly as of nerves of categories and refer an [expository text](https://arxiv.org/pdf/0809.4221.pdf) by Greg Friedman for the formal definition and an overview.
+All of them have more than one sequence on the same set of objects. Hence nerves of these categories cannot be represented as simplicial complexes. But they have geometric realizations defined by similar construction and comprised of geometric simplices and their continuous deformations. Objects like these are called simplicial sets. Let's think of them exactly as of nerves of categories and refer to an [expository text](https://arxiv.org/pdf/0809.4221.pdf) by Greg Friedman for the formal definition and an overview.
 
 Let's define geometric realization inductively by procedure of attaching $$n$$-simplices to simplices of smaller dimensions. Vertices define set of geometric vertices. Assume we have a geometric realization of subset of simplices of dimension not above $$n$$. When we can attach $$n+1$$-simplices by deforming and gluing them to their boundaries, which are already in a structure.
 
