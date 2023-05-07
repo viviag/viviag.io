@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Run to classifying spaces"
-tags: [math.AT]
+tags: [math-at]
 usemathjax: true
 ---
 
