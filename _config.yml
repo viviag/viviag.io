@@ -12,6 +12,7 @@ url: "https://viviag.io" # the base hostname & protocol for your site
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-feed
 
 whitelist:
   - jekyll-redirect-from
@@ -65,3 +66,4 @@ links:
 # Add links for more focus here
 special_links:
   "Discuss": https://github.com/viviag/viviag.io/issues
+  "RSS": /feed.xml
