@@ -36,25 +36,10 @@ I used to:
     MSU](https://internat.msu.ru/en/). Advisor: [Oleg
     Koliasnikov](https://istina.msu.ru/profile/olkol/).
 
-### Open source projects
-
--   [dbmonitor](https://hackage.haskell.org/package/dbmonitor) --- tool
-    to perform consistency checks on Postgres databases. Supports hot
-    swap of any part of configuration.
--   [changelogged](https://hackage.haskell.org/package/changelogged) ---
-    changelog manager for git projects.
--   [LaTeX-numbers](https://github.com/pandora-mccme/LaTeX-numbers) ---
-    formatting autocorrection tool for LaTeX. Rules are taken based on
-    rules of MCCME publishing.
-
-### Papers
-
-Unfortunately, I cannot add any sensible row to this section yet.
-
 ### Various sites
 
 -   [GitHub](https://github.com/viviag)
--   [Reddit](https://www.reddit.com/user/vitalii_guzeev/)
+-   [Hackage](https://hackage.haskell.org/user/viviag)
 -   [Codewars](https://www.codewars.com/users/viviag)
 -   [Travel map](https://3pulse.com/Viviag/map)
 
