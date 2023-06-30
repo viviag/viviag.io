@@ -12,7 +12,7 @@ In 2019, [faculty of computer science at HSE](https://cs.hse.ru/en/) and persona
 
 This task is indeed complex and is strong enough for the dedicated laboratory. The laboratory in initial form was started as educational, hence one of the first action taken by organizers was to open a recruitment of research interns. I was among the first interns selected. The laboratory also collaborated with faculty of MSU, who were responsible for experimental data.
 
-### Main problem and its decomposition
+### Main problem
 
 Several words must be written about the major task.
 
