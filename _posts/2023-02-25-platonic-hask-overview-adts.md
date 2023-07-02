@@ -5,6 +5,8 @@ tags: [hask]
 usemathjax: true
 ---
 
+_[To index of the series](https://viviag.io/tagged/hask/)_
+
 #### Algebraic data types
 
 We have only considered binary products and coproducts. We can consider family of products of arbitrary arity defining them as representing objects of $$\Pi_{i \in I}\operatorname{Hom}(\_,A_i)$$ for finite ordinals $$I$$. This definition has a problem with $$I = 0$$, we treat this case specially and define empty product as the terminal object. Universal properties of these objects can be drawn easily from the binary case.
