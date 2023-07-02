@@ -12,7 +12,7 @@ Let's start with a basic definition:
 
 ##### Definition
 
-$$\mathrm{C}$$ is a category if all of the following holds:
+An entity $$\mathrm{C}$$ is a category if all of the following holds:
 
 1.  There exists class $$\operatorname{Ob}(\mathrm{C})$$ of objects of $$\mathrm{C}$$.
 2.  $$\forall A, B \in \operatorname{Ob}(\mathrm{C})$$ there exists class $$\operatorname{Hom}_{\mathrm{C}}(A,B)$$ of morphisms between $$A$$ and $$B$$ in $$\mathrm{C}$$.
@@ -25,9 +25,7 @@ Category with class $$\operatorname{Ob}$$ and all $$\operatorname{Hom}$$-classes
 
 ##### Examples
 
-A basic example of a category is $$Set$$ --- category with objects --- sets and morphisms --- functions between sets. This example will be widely used.
-
-Another good example --- category of vector spaces with homomorphisms as morphisms. This category has less in common with what we do here.
+A basic example of a category is $$Set$$ --- category with objects --- sets and morphisms --- functions between sets.
 
 We want to construct a reasonable category out of Haskell types. We might want to construct a reasonable category out of abstract types. For this purpose Haskell is a good yardstick and support --- it was designed with respect to category theory and we can go far by judging the existence of some constructions in our category by the existence of their GHC implementations.
 
@@ -44,7 +42,7 @@ Failure of this attempt makes whole categorical reasoning about Haskell limited 
 
 **Second attempt**
 
-Consider $$\operatorname{Ob}(Hask)$$ --- Haskell types without $$\bot$$ with natural $$\operatorname{Hom}$$ sets --- all functions between these platonic types excluding partial and nonterminating functions. To shorten notation here we overload terms of Haskell Wiki. `Wiki.Hask = Hask'; Wiki.Platonic Hask = Hask`.
+Consider $$\operatorname{Ob}(Hask)$$ --- Haskell types without $$\bot$$ with natural $$\operatorname{Hom}$$-sets --- all functions between these platonic types excluding partial and nonterminating functions. To shorten notation here we overload terms of Haskell Wiki. `Wiki.Hask = Hask'; Wiki.Platonic Hask = Hask`.
 
 Note: I'm not using the term "Maximal total subset of Haskell" in the sense of
 [Wikipedia article](https://en.wikipedia.org/wiki/Total_functional_programming)
@@ -68,16 +66,16 @@ We only have to check the properties of the composition:
 -   Identity [exists](https://hackage.haskell.org/package/base-4.17.0.0/docs/src/GHC.Base.html#id).
 -   `seq` in a previous attempt violated identity law. Proof of the identity law by equational reasoning is trivial.
 
-(1) in equations represents taking definition, (2) refers to $$\beta$$-reduction, in both cases, we follow the applicative order of evaluation. Equality is $$\alpha$$-congruence relation.
+(1) in equations represents taking definition, (2) refers to $$\beta$$-reduction, in both cases, we follow the applicative order of evaluation. Equality is the $$\alpha$$-congruence relation.
 
 Following posts will operate $$Hask$$.
 
+The category $$Hask$$ is not equivalent to $$Set$$: consider the type `data Foo = Foo (Foo -> Bool)`. The map `Foo :: (Foo -> Bool) -> Foo` is an injective map from $$2^{Foo}$$ to $$Foo$$. This situation is impossible in $$Set$$. Here is an older [Reference](https://www.reddit.com/r/haskell/comments/sz4ghr/comment/hy3916c/?utm_source=share&utm_medium=web2x&context=3).
+
 ##### Remarks
 
-1. $$Hask$$ is not equivalent to Set. Here is the [Reference](https://www.reddit.com/r/haskell/comments/sz4ghr/comment/hy3916c/?utm_source=share&utm_medium=web2x&context=3).
+1. It is also common to denote $$Hom_{\mathrm{C}}(A,A)$$ as $$End_{\mathrm{C}}(A)$$ --- set of endomorphisms of $$A$$.
 
-2. It is also common to denote $$Hom_{\mathrm{C}}(A,A)$$ as $$End_{\mathrm{C}}(A)$$ --- set of endomorphisms of $$A$$.
-
-3. I will frequently use the following notation:
+2. I will frequently use the following notation:
 - `f : A` for element $$f$$ of $$A \in \operatorname{Ob}(Hask)$$
 - `f : A -> B` for $$f \in \operatorname{Hom}_{Hask}(A,B)$$

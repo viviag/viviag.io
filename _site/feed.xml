@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-02T19:51:18+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitalii Guzeev</title><subtitle>Blog and entry point to my online appearance</subtitle><entry><title type="html">Run to classifying spaces</title><link href="http://localhost:4000/blog/run-to-classifying-spaces" rel="alternate" type="text/html" title="Run to classifying spaces" /><published>2023-05-04T00:00:00+02:00</published><updated>2023-05-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/run-to-classifying-spaces</id><content type="html" xml:base="http://localhost:4000/blog/run-to-classifying-spaces"><![CDATA[<p>I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-03T00:35:47+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitalii Guzeev</title><subtitle>Blog and entry point to my online appearance</subtitle><entry><title type="html">Run to classifying spaces</title><link href="http://localhost:4000/blog/run-to-classifying-spaces" rel="alternate" type="text/html" title="Run to classifying spaces" /><published>2023-05-04T00:00:00+02:00</published><updated>2023-05-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/run-to-classifying-spaces</id><content type="html" xml:base="http://localhost:4000/blog/run-to-classifying-spaces"><![CDATA[<p>I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.</p>
 
 <p>My friend has mathematical education and is familiar with algebra, discrete optimization and real analysis, but he had never had any course in topology and does not work as a mathematician. I tried to sketch a path to the subject. At the end we agreed that an exercise sheet would support it a lot.</p>
 
@@ -235,10 +235,13 @@ Consider classes of isomorphic types and denote binary product as \(\cdot\), bin
 
 <p>Distributivity gives us equation \(a \cdot (b + c) = a \cdot b + a \cdot c\).</p>
 
-<p><strong>Proposition:</strong> For any object \(a\) \(0 \cdot a = 0\). I.e. \(0 \cdot a\) is an initial object.
-Proof by reference to <a href="https://ncatlab.org/nlab/show/distributive+category">ncatlab: Proposition 2.2</a>.</p>
+<p><strong>Proposition:</strong> For any object \(a\) \(0 \cdot a = 0\). I.e. \(0 \cdot a\) is an initial object.</p>
 
-<p>For the category of finite sets, this construction yields the semiring of natural numbers, as Qiaochu Yuan <a href="https://math.stackexchange.com/questions/2582771/relationship-between-algebraic-data-types-and-the-set-of-real-numbers#comment5333054_2582817">points</a> out. This is an easy exercise and we can compare it with the notation of finite ordinals used to compactly denote finite products at the start of the previous post.</p>
+<p><strong>Proof:</strong> Consider \(\operatorname{Hom}(0 \cdot a, b)\) for some \(b\). It is non-empty due to existence of the unique composition \(0 \cdot a \xrightarrow{\pi_0} \to b\). Let \(f, g \in \operatorname{Hom}(0 \cdot a, b)\). Consider \((0 \cdot a) + (0 \cdot a) = (0 + 0) \cdot a = 0 \cdot a\). There is a unique morphism from \(0\) to \(0\), hence inclusions \(i_1\) and \(i_2\) to the left and right summands coincide. Consider \(f + g : (0 \cdot a) + (0 \cdot a) \to b + b\). Compositions \((f + g) . i_1\) and $(f + g) . i_2$ are equal as $b + 0 = 0 + b$. But \((f + g) . i_1$ = f + 0 = f$ and\)(f + g) . i_2 = 0 + g = g$$.</p>
+
+<p>Reference: <a href="https://ncatlab.org/nlab/show/distributive+category">ncatlab: Proposition 2.2</a>.</p>
+
+<p>For the category of finite sets, this construction yields the semiring of natural numbers, as Qiaochu Yuan <a href="https://math.stackexchange.com/questions/2582771/relationship-between-algebraic-data-types-and-the-set-of-real-numbers#comment5333054_2582817">points</a> out. This is an easy exercise and we can compare it with the notation of finite ordinals used to compactly denote finite products at the start of the post.</p>
 
 <p>We have also just shown that isomorphism classes of objects in \(Hask\) as a symmetric monoidal category with finite coproducts form a commutative semiring.</p>
 
@@ -691,14 +694,10 @@ diagram commutes:</p>
 
 <p><img src="/assets/functor.svg" alt="functor" /></p>
 
-<p>is a called a <strong>contravariant functor</strong> if the following diagram
+<p>or a <strong>contravariant functor</strong> if the following diagram
 commutes:</p>
 
 <p><img src="/assets/cofunctor.svg" alt="functor" /></p>
-
-<p>These two definitions are related to the notion of <strong>dual category</strong> —
-category \(\mathrm{C}^{op}\) is constructed from \(\mathrm{C}\) by formally reverting all arrows in a
-diagram of \(\mathrm{C}\). This notion allows us to identify contravariant functor \(F : \mathrm{C} \to \mathrm{D}\) with covariant \(F^{op} : \mathrm{C} \to \mathrm{D}^{op}\).</p>
 
 <p>Here are several useful definitions:</p>
 
@@ -709,18 +708,14 @@ bijective — <strong>fully faithful</strong>.</p>
 
 <p>Categories \(\mathrm{C}\) and \(\mathrm{D}\) are said to be equivalent if there exists fully faithful functor \(F : \mathrm{C} \to \mathrm{D}\) such that every object of \(\mathrm{D}\) is isomorphic to \(F(A)\) for some \(A \in \operatorname{C}\).</p>
 
-<p>We have constructed the category and can consider its internal
-structure. Functors from category to itself are called <strong>endofunctors</strong>.
-However, it may be convenient to talk about subcategories in \(Hask\) and about
-functors to them.</p>
-
-<h5 id="definition">Definition</h5>
+<p>We have constructed the category \(Hask\) and we have a notion of composable mappings between categories. Functors from category to itself are called <strong>endofunctors</strong>.
+However, it may be convenient to talk about subcategories in \(Hask\) and about functors between them.</p>
 
 <p>Category \(\mathrm{D}\) is a subcategory of \(\mathrm{C}\) if \(\operatorname{Ob}(\mathrm{D}) \subseteq \operatorname{Ob}(\mathrm{C})\) and \(\forall A,B \in \operatorname{Ob}(\mathrm{D})\; \operatorname{Hom}_{\mathrm{D}}(A,B) \subseteq \operatorname{Hom}_{\mathrm{C}}(A,B)\).</p>
 
 <p>If \(\forall A,B \in \operatorname{Ob}(\mathrm{D})\; \operatorname{Hom}_{\mathrm{D}}(A,B) = \operatorname{Hom}_{\mathrm{C}}(A,B)\) \(\mathrm{D}\) is called <strong>full subcategory</strong> of \(\mathrm{C}\).</p>
 
-<p>Every subcategory gives rise to faithful embedding functor \(Emb : \mathrm{D} \to \mathrm{C}\) with identical actions both on objects and morphisms. If \(\mathrm{D}\) is a full subcategory \(Emb\) is fully faithful.</p>
+<p>Every subcategory gives rise to faithful embedding functor \(Emb : \mathrm{D} \to \mathrm{C}\) with identical actions both on objects and morphisms. If \(\mathrm{D}\) is a full subcategory, then \(Emb\) is fully faithful.</p>
 
 <p>Now let’s take a look at functors in Hask.</p>
 
@@ -736,10 +731,7 @@ functors to them.</p>
   <li>\(Right_{\operatorname{Ob}}(a : b)\) = <code class="language-plaintext highlighter-rouge">Right a</code>; \(Right_{\operatorname{Hom}}(f : b \to c)\) = <code class="language-plaintext highlighter-rouge">(\Right a -&gt; Right (f a))</code>.</li>
 </ol>
 
-<p>Both of them are well-defined covariant faithful functors in \(Hask\).</p>
-
-<p>Moreover, each parametric type forms a full subcategory in \(Hask\), hence these
-functors can be considered as \(Hask \to Either\). Or 2. can be considered as functor \(Hask \to Either\;a\). And there are corresponding embedding functors in other directions.</p>
+<p>Both of them are well-defined covariant faithful endofunctors in \(Hask\). More specifically, \(Right\) is a functor to the category \(Either\;a\;\_\) and \(Left\) is a functor to the category \(Either\;\_\;b\).</p>
 
 <p>However, only \(Right\) is supported by a valid <code class="language-plaintext highlighter-rouge">Functor</code> instance in Haskell.
 Instance for <code class="language-plaintext highlighter-rouge">Either</code>:</p>
@@ -752,12 +744,22 @@ Instance for <code class="language-plaintext highlighter-rouge">Either</code>:</
 
 <p>Note: <code class="language-plaintext highlighter-rouge">fmap</code> defines the action of functor on morphisms. We change the <code class="language-plaintext highlighter-rouge">Prelude</code> definition for now — it is valid and will be justified in the next post.</p>
 
-<p>Laws of the <code class="language-plaintext highlighter-rouge">Functor</code> typeclass represent the usual definition of functor via the following diagram:
-<img src="/assets/hasfunctor.svg" alt="haskfunctor" /></p>
+<p>Can \(Left\) functor be expressed? Yes:</p>
 
-<p>Haskell does not allow to define <code class="language-plaintext highlighter-rouge">Functor</code> instances over non-terminal parameters in its own terms.</p>
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">swap</span> <span class="o">::</span> <span class="kt">Either</span> <span class="n">b</span> <span class="n">a</span> <span class="o">-&gt;</span> <span class="kt">Either</span> <span class="n">a</span> <span class="n">b</span>
+<span class="n">swap</span> <span class="p">(</span><span class="kt">Right</span> <span class="n">a</span><span class="p">)</span> <span class="o">=</span> <span class="kt">Left</span> <span class="n">a</span>
+<span class="n">swap</span> <span class="p">(</span><span class="kt">Left</span> <span class="n">a</span><span class="p">)</span> <span class="o">=</span> <span class="kt">Right</span> <span class="n">a</span>
+ 
+<span class="n">fmap'</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Either</span> <span class="n">a</span> <span class="n">b</span> <span class="o">-&gt;</span> <span class="kt">Either</span> <span class="n">c</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">fmap'</span> <span class="n">f</span> <span class="o">=</span> <span class="n">swap</span> <span class="o">.</span> <span class="n">fmap</span> <span class="n">f</span> <span class="o">.</span> <span class="n">swap</span>
+</code></pre></div></div>
+
+<p>But it cannot be expressed in terms of <code class="language-plaintext highlighter-rouge">Functor</code> typeclass as long as there is no single-parametric type <code class="language-plaintext highlighter-rouge">Either _ b</code> in Haskell. In particular, we see that not any subcategory of \(Hask\) is encapsulated in a type.</p>
 
 <p>Note that the uniqueness and derivability of <code class="language-plaintext highlighter-rouge">Functor</code> is not an elementary question. Since it’s not a question of category theory, let me refer to <a href="https://stackoverflow.com/questions/19774904/are-functor-instances-unique">SO</a>.</p>
+
+<p>Laws of the <code class="language-plaintext highlighter-rouge">Functor</code> typeclass represent the usual definition of functor via the following diagram:
+<img src="/assets/hasfunctor.svg" alt="haskfunctor" /></p>
 
 <p>Yet another restriction on Haskell <code class="language-plaintext highlighter-rouge">Functor</code> typeclass is that it does
 not allow functors between nontrivial subcategories of \(Hask\).</p>
@@ -783,7 +785,7 @@ side:</p>
 
 <p>For any category \(\mathrm{C}\) and object \(A\) there exist two functors.</p>
 
-<p>First — \(\operatorname{Hom}(A,\_) : \mathrm{C} \to Set\) is a covariant functor, moving \(X\) to \(\operatorname{Hom}(A,X)\). Second — contravariant \(\operatorname{Hom}(\_,A)\) with same signature, moving \(X\) to \(\operatorname{Hom}(X,A)\).</p>
+<p>First — \(\operatorname{Hom}(A,\_) : \mathrm{C} \to Set\) is a covariant functor, moving \(X\) to \(\operatorname{Hom}(A,X)\). Second — contravariant \(\operatorname{Hom}(\_,A)\) with the same signature, moving \(X\) to \(\operatorname{Hom}(X,A)\).</p>
 
 <p>Both functors matter a lot for future constructions and obviously exist in \(Hask\).</p>
 
@@ -827,19 +829,19 @@ group called free with presentation \(set \mapsto \{set\;|\;\emptyset\}\).</li>
   <li>To say it out — basic example is identity functor.</li>
 </ul>
 
-<p>All these functors are relevant to \(Hask\).</p>
+<p>All these constructions are relevant to \(Hask\).</p>
 
-<p>Let’s take a look at the introduced structures. At the level of types, we have types and morphisms between them. Morphisms can be surjective, injective, or bijective, in the last case they are isomorphisms. Now we turn to the level of subcategories of \(Hask\) and we have functors with their own properties. These properties are finer than properties of Set-level morphisms but they are similar in spirit.</p>
+<p>Let’s take a look at the introduced structures. At the level of types, we have types and morphisms between them. Morphisms can be surjective, injective, or bijective, in the last case they are isomorphisms. Now we turn to the level of subcategories of \(Hask\) and we have functors that can be full, faithful, or fully faithful. These properties are finer than properties of Set-level morphisms but they are similar in spirit.</p>
 
 <p>At the moment we can take one of two steps:</p>
 <ol>
-  <li>Broad: try to introduce some category of subcategories of \(Hask\) and explore it. Probably more than one if we want to take care of contravariant functors.</li>
+  <li>Broad: try to introduce some category of subcategories of \(Hask\) and explore it. Probably more than one if we want to take care of contravariant functors. Note that contravariant functors are covariant functors from the dual category — category with all arrows reversed.</li>
   <li>Deep: try to stack the next layer and define morphisms between functors.</li>
 </ol>
 
 <p>For now, we follow the second path.</p>
 
-<h5 id="definition-1">Definition</h5>
+<h5 id="definition">Definition</h5>
 
 <p>Consider \(F,G\), — covariant functors from \(\mathrm{C}\) to \(\mathrm{D}\). We will call family \(\eta\) of
 morphisms in \(\mathrm{D}\) <strong>natural transformation</strong> from \(F\) to \(G\) if for any object \(X\) in \(\operatorname{Ob}(C)\) and morphism \(f : X \to Y\) there exist morphisms \(\eta_X : F(X) \to G(X)\) and \(\eta_Y : F(Y) \to G(Y)\) in \(\mathrm{D}\) such that \(\forall f \in \operatorname{Hom}_{\mathrm{C}}(X,Y)\) the following diagram commutes:</p>
@@ -878,7 +880,7 @@ close to its user interface for a long time. Here is how it was used:
 
 <h5 id="definition">Definition</h5>
 
-<p>\(\mathrm{C}\) is a category if all of the following holds:</p>
+<p>An entity \(\mathrm{C}\) is a category if all of the following holds:</p>
 
 <ol>
   <li>There exists class \(\operatorname{Ob}(\mathrm{C})\) of objects of \(\mathrm{C}\).</li>
@@ -896,9 +898,7 @@ close to its user interface for a long time. Here is how it was used:
 
 <h5 id="examples">Examples</h5>
 
-<p>A basic example of a category is \(Set\) — category with objects — sets and morphisms — functions between sets. This example will be widely used.</p>
-
-<p>Another good example — category of vector spaces with homomorphisms as morphisms. This category has less in common with what we do here.</p>
+<p>A basic example of a category is \(Set\) — category with objects — sets and morphisms — functions between sets.</p>
 
 <p>We want to construct a reasonable category out of Haskell types. We might want to construct a reasonable category out of abstract types. For this purpose Haskell is a good yardstick and support — it was designed with respect to category theory and we can go far by judging the existence of some constructions in our category by the existence of their GHC implementations.</p>
 
@@ -915,7 +915,7 @@ close to its user interface for a long time. Here is how it was used:
 
 <p><strong>Second attempt</strong></p>
 
-<p>Consider \(\operatorname{Ob}(Hask)\) — Haskell types without \(\bot\) with natural \(\operatorname{Hom}\) sets — all functions between these platonic types excluding partial and nonterminating functions. To shorten notation here we overload terms of Haskell Wiki. <code class="language-plaintext highlighter-rouge">Wiki.Hask = Hask'; Wiki.Platonic Hask = Hask</code>.</p>
+<p>Consider \(\operatorname{Ob}(Hask)\) — Haskell types without \(\bot\) with natural \(\operatorname{Hom}\)-sets — all functions between these platonic types excluding partial and nonterminating functions. To shorten notation here we overload terms of Haskell Wiki. <code class="language-plaintext highlighter-rouge">Wiki.Hask = Hask'; Wiki.Platonic Hask = Hask</code>.</p>
 
 <p>Note: I’m not using the term “Maximal total subset of Haskell” in the sense of
 <a href="https://en.wikipedia.org/wiki/Total_functional_programming">Wikipedia article</a>
@@ -944,16 +944,15 @@ reasoning is legal (Church-Rosser property holds — it was the exact property b
   <li><code class="language-plaintext highlighter-rouge">seq</code> in a previous attempt violated identity law. Proof of the identity law by equational reasoning is trivial.</li>
 </ul>
 
-<p>(1) in equations represents taking definition, (2) refers to \(\beta\)-reduction, in both cases, we follow the applicative order of evaluation. Equality is \(\alpha\)-congruence relation.</p>
+<p>(1) in equations represents taking definition, (2) refers to \(\beta\)-reduction, in both cases, we follow the applicative order of evaluation. Equality is the \(\alpha\)-congruence relation.</p>
 
 <p>Following posts will operate \(Hask\).</p>
+
+<p>The category \(Hask\) is not equivalent to \(Set\): consider the type <code class="language-plaintext highlighter-rouge">data Foo = Foo (Foo -&gt; Bool)</code>. The map <code class="language-plaintext highlighter-rouge">Foo :: (Foo -&gt; Bool) -&gt; Foo</code> is an injective map from \(2^{Foo}\) to \(Foo\). This situation is impossible in \(Set\). Here is an older <a href="https://www.reddit.com/r/haskell/comments/sz4ghr/comment/hy3916c/?utm_source=share&amp;utm_medium=web2x&amp;context=3">Reference</a>.</p>
 
 <h5 id="remarks">Remarks</h5>
 
 <ol>
-  <li>
-    <p>\(Hask\) is not equivalent to Set. Here is the <a href="https://www.reddit.com/r/haskell/comments/sz4ghr/comment/hy3916c/?utm_source=share&amp;utm_medium=web2x&amp;context=3">Reference</a>.</p>
-  </li>
   <li>
     <p>It is also common to denote \(Hom_{\mathrm{C}}(A,A)\) as \(End_{\mathrm{C}}(A)\) — set of endomorphisms of \(A\).</p>
   </li>

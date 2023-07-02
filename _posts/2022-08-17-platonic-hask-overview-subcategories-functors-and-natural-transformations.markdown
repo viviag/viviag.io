@@ -21,14 +21,10 @@ diagram commutes:
 
 ![functor](/assets/functor.svg)
 
-is a called a **contravariant functor** if the following diagram
+or a **contravariant functor** if the following diagram
 commutes:
 
 ![functor](/assets/cofunctor.svg)
-
-These two definitions are related to the notion of **dual category** ---
-category $$\mathrm{C}^{op}$$ is constructed from $$\mathrm{C}$$ by formally reverting all arrows in a
-diagram of $$\mathrm{C}$$. This notion allows us to identify contravariant functor $$F : \mathrm{C} \to \mathrm{D}$$ with covariant $$F^{op} : \mathrm{C} \to \mathrm{D}^{op}$$.
 
 Here are several useful definitions:
 
@@ -39,18 +35,14 @@ bijective --- **fully faithful**.
 
 Categories $$\mathrm{C}$$ and $$\mathrm{D}$$ are said to be equivalent if there exists fully faithful functor $$F : \mathrm{C} \to \mathrm{D}$$ such that every object of $$\mathrm{D}$$ is isomorphic to $$F(A)$$ for some $$A \in \operatorname{C}$$.
 
-We have constructed the category and can consider its internal
-structure. Functors from category to itself are called **endofunctors**.
-However, it may be convenient to talk about subcategories in $$Hask$$ and about
-functors to them.
-
-##### Definition
+We have constructed the category $$Hask$$ and we have a notion of composable mappings between categories. Functors from category to itself are called **endofunctors**.
+However, it may be convenient to talk about subcategories in $$Hask$$ and about functors between them.
 
 Category $$\mathrm{D}$$ is a subcategory of $$\mathrm{C}$$ if $$\operatorname{Ob}(\mathrm{D}) \subseteq \operatorname{Ob}(\mathrm{C})$$ and $$\forall A,B \in \operatorname{Ob}(\mathrm{D})\; \operatorname{Hom}_{\mathrm{D}}(A,B) \subseteq \operatorname{Hom}_{\mathrm{C}}(A,B)$$.
 
 If $$\forall A,B \in \operatorname{Ob}(\mathrm{D})\; \operatorname{Hom}_{\mathrm{D}}(A,B) = \operatorname{Hom}_{\mathrm{C}}(A,B)$$ $$\mathrm{D}$$ is called **full subcategory** of $$\mathrm{C}$$.
 
-Every subcategory gives rise to faithful embedding functor $$Emb : \mathrm{D} \to \mathrm{C}$$ with identical actions both on objects and morphisms. If $$\mathrm{D}$$ is a full subcategory $$Emb$$ is fully faithful.
+Every subcategory gives rise to faithful embedding functor $$Emb : \mathrm{D} \to \mathrm{C}$$ with identical actions both on objects and morphisms. If $$\mathrm{D}$$ is a full subcategory, then $$Emb$$ is fully faithful.
 
 Now let's take a look at functors in Hask.
 
@@ -64,10 +56,7 @@ There are several possible constructions of $$Hask$$-endofunctor arising from th
 1. $$Left_{\operatorname{Ob}}(a : a)$$ = `Left a`; $$Left_{\operatorname{Hom}}(f : a \to c)$$ = `(\Left a -> Left (f a))`.
 2. $$Right_{\operatorname{Ob}}(a : b)$$ = `Right a`; $$Right_{\operatorname{Hom}}(f : b \to c)$$ = `(\Right a -> Right (f a))`.
 
-Both of them are well-defined covariant faithful functors in $$Hask$$.
-
-Moreover, each parametric type forms a full subcategory in $$Hask$$, hence these
-functors can be considered as $$Hask \to Either$$. Or 2. can be considered as functor $$Hask \to Either\;a$$. And there are corresponding embedding functors in other directions.
+Both of them are well-defined covariant faithful endofunctors in $$Hask$$. More specifically, $$Right$$ is a functor to the category $$Either\;a\;\_$$ and $$Left$$ is a functor to the category $$Either\;\_\;b$$. 
 
 However, only $$Right$$ is supported by a valid `Functor` instance in Haskell.
 Instance for `Either`:
@@ -81,12 +70,23 @@ instance Functor (Either c) where
 
 Note: `fmap` defines the action of functor on morphisms. We change the `Prelude` definition for now --- it is valid and will be justified in the next post.
 
-Laws of the `Functor` typeclass represent the usual definition of functor via the following diagram:
-![haskfunctor](/assets/hasfunctor.svg)
+Can $$Left$$ functor be expressed? Yes:
 
-Haskell does not allow to define `Functor` instances over non-terminal parameters in its own terms.
+```haskell
+swap :: Either b a -> Either a b
+swap (Right a) = Left a
+swap (Left a) = Right a
+ 
+fmap' :: (a -> c) -> (Either a b -> Either c b)
+fmap' f = swap . fmap f . swap
+```
+
+But it cannot be expressed in terms of `Functor` typeclass as long as there is no single-parametric type `Either _ b` in Haskell. In particular, we see that not any subcategory of $$Hask$$ is encapsulated in a type.
 
 Note that the uniqueness and derivability of `Functor` is not an elementary question. Since it's not a question of category theory, let me refer to [SO](https://stackoverflow.com/questions/19774904/are-functor-instances-unique).
+
+Laws of the `Functor` typeclass represent the usual definition of functor via the following diagram:
+![haskfunctor](/assets/hasfunctor.svg)
 
 Yet another restriction on Haskell `Functor` typeclass is that it does
 not allow functors between nontrivial subcategories of $$Hask$$.
@@ -112,7 +112,7 @@ All three of these functors are not endofunctors in $$Hask$$ since they are not 
 
 For any category $$\mathrm{C}$$ and object $$A$$ there exist two functors.
 
-First --- $$\operatorname{Hom}(A,\_) : \mathrm{C} \to Set$$ is a covariant functor, moving $$X$$ to $$\operatorname{Hom}(A,X)$$. Second --- contravariant $$\operatorname{Hom}(\_,A)$$ with same signature, moving $$X$$ to $$\operatorname{Hom}(X,A)$$.
+First --- $$\operatorname{Hom}(A,\_) : \mathrm{C} \to Set$$ is a covariant functor, moving $$X$$ to $$\operatorname{Hom}(A,X)$$. Second --- contravariant $$\operatorname{Hom}(\_,A)$$ with the same signature, moving $$X$$ to $$\operatorname{Hom}(X,A)$$.
 
 Both functors matter a lot for future constructions and obviously exist in $$Hask$$.
 
@@ -153,17 +153,16 @@ Laws of `Contravariant` form the following familiar diagram:
     the defining relations of a category on a set and thus define a free
     object in a category. For example, free functor from $$Set$$ to $$Grp$$ yields the
     group called free with presentation $$set \mapsto \{set\;|\;\emptyset\}$$.
-- The tensor product with a fixed object (left or right).
+-   The tensor product with a fixed object (left or right).
 -   To say it out --- basic example is identity functor.
 
-All these functors are relevant to $$Hask$$.
+All these constructions are relevant to $$Hask$$.
 
 
-
-Let's take a look at the introduced structures. At the level of types, we have types and morphisms between them. Morphisms can be surjective, injective, or bijective, in the last case they are isomorphisms. Now we turn to the level of subcategories of $$Hask$$ and we have functors with their own properties. These properties are finer than properties of Set-level morphisms but they are similar in spirit.
+Let's take a look at the introduced structures. At the level of types, we have types and morphisms between them. Morphisms can be surjective, injective, or bijective, in the last case they are isomorphisms. Now we turn to the level of subcategories of $$Hask$$ and we have functors that can be full, faithful, or fully faithful. These properties are finer than properties of Set-level morphisms but they are similar in spirit.
 
 At the moment we can take one of two steps:
-1. Broad: try to introduce some category of subcategories of $$Hask$$ and explore it. Probably more than one if we want to take care of contravariant functors.
+1. Broad: try to introduce some category of subcategories of $$Hask$$ and explore it. Probably more than one if we want to take care of contravariant functors. Note that contravariant functors are covariant functors from the dual category --- category with all arrows reversed.
 2. Deep: try to stack the next layer and define morphisms between functors.
 
 For now, we follow the second path.
