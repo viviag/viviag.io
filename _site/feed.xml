@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-02T18:59:55+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitalii Guzeev</title><subtitle>Blog and entry point to my online appearance</subtitle><entry><title type="html">Run to classifying spaces</title><link href="http://localhost:4000/blog/run-to-classifying-spaces" rel="alternate" type="text/html" title="Run to classifying spaces" /><published>2023-05-04T00:00:00+02:00</published><updated>2023-05-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/run-to-classifying-spaces</id><content type="html" xml:base="http://localhost:4000/blog/run-to-classifying-spaces"><![CDATA[<p>I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-02T19:51:18+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitalii Guzeev</title><subtitle>Blog and entry point to my online appearance</subtitle><entry><title type="html">Run to classifying spaces</title><link href="http://localhost:4000/blog/run-to-classifying-spaces" rel="alternate" type="text/html" title="Run to classifying spaces" /><published>2023-05-04T00:00:00+02:00</published><updated>2023-05-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/run-to-classifying-spaces</id><content type="html" xml:base="http://localhost:4000/blog/run-to-classifying-spaces"><![CDATA[<p>I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.</p>
 
 <p>My friend has mathematical education and is familiar with algebra, discrete optimization and real analysis, but he had never had any course in topology and does not work as a mathematician. I tried to sketch a path to the subject. At the end we agreed that an exercise sheet would support it a lot.</p>
 
@@ -164,29 +164,29 @@ This proof may also require some methods which were not mentioned in the text.</
 …</li>
 </ol>
 
-<p>The intention of the text was to run to classifying spaces and here we are, surrounded by questions.</p>]]></content><author><name></name></author><category term="math-at" /><summary type="html"><![CDATA[I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.]]></summary></entry><entry><title type="html">Platonic Hask overview: algebraic data types as corollary of monoidal structure</title><link href="http://localhost:4000/blog/platonic-hask-overview-adts" rel="alternate" type="text/html" title="Platonic Hask overview: algebraic data types as corollary of monoidal structure" /><published>2023-02-25T00:00:00+01:00</published><updated>2023-02-25T00:00:00+01:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-adts</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-adts"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
+<p>The intention of the text was to run to classifying spaces and here we are, surrounded by questions.</p>]]></content><author><name></name></author><category term="math-at" /><summary type="html"><![CDATA[I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.]]></summary></entry><entry><title type="html">Platonic Hask overview: algebraic data types as a corollary of monoidal structure</title><link href="http://localhost:4000/blog/platonic-hask-overview-adts" rel="alternate" type="text/html" title="Platonic Hask overview: algebraic data types as a corollary of monoidal structure" /><published>2023-02-25T00:00:00+01:00</published><updated>2023-02-25T00:00:00+01:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-adts</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-adts"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
 
 <h4 id="algebraic-data-types">Algebraic data types</h4>
 
-<p>We have only considered binary products and coproducts. We can consider family of products of arbitrary arity defining them as representing objects of \(\Pi_{i \in I}\operatorname{Hom}(\_,A_i)\) for finite ordinals \(I\). This definition has a problem with \(I = 0\), we treat this case specially and define empty product as the terminal object. Universal properties of these objects can be drawn easily from the binary case.</p>
+<p>We have only considered binary products and coproducts. We can consider a family of products of arbitrary arity defining them as representing objects of \(\Pi_{i \in I}\operatorname{Hom}(\_,A_i)\) for finite ordinals \(I\). This definition has a problem with \(I = 0\), we treat this case specially and define the empty product as the terminal object. Universal properties of these objects can be drawn easily from the binary case.</p>
 
-<p>\(Hask\) has all the finite products, for instance, product <code class="language-plaintext highlighter-rouge">(a,(b,c))</code> satisfy the universal property. This is an instance of general statement that a category with binary products and terminal objects has all finite products.</p>
+<p>\(Hask\) has all the finite products, for instance, product <code class="language-plaintext highlighter-rouge">(a,(b,c))</code> satisfy the universal property. This is an instance of a general statement that a category with binary products and terminal objects has all finite products.</p>
 
-<p>Usual binary product <code class="language-plaintext highlighter-rouge">(,)</code> serves as a tensor product in \((Hask, (,), ())\), hence it satisfies associativity law and these products can be written without too much parens. Haskell has this notion — there are tuples of length bigger than 2. But each of them is implemented separately in GHC and it doesn’t allow tuples of length above some finite number.</p>
+<p>Usual binary product <code class="language-plaintext highlighter-rouge">(,)</code> serves as a tensor product in \((Hask, (,), ())\), hence it satisfies associativity law and these products can be written without too many parens. Haskell has this notion — there are tuples of length bigger than 2. But each of them is implemented separately in GHC and it doesn’t allow tuples of length above some finite number.</p>
 
-<p>This number is big enough for most applications, but here we need it only to notice that it is not a notion Haskell uses for parens-free presentation of finite products. Used notion is the following:</p>
+<p>This number is big enough for most applications, but here we need it only to notice that it is not a notion Haskell uses for the parens-free presentation of finite products. The used notion is the following:</p>
 <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">P3</span> <span class="o">=</span> <span class="kt">P3</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span>
 </code></pre></div></div>
-<p>This type is naturally isomorphic to <code class="language-plaintext highlighter-rouge">(a,b,c)</code> and is an example of product type.</p>
+<p>This type is naturally isomorphic to <code class="language-plaintext highlighter-rouge">(a,b,c)</code> and is an example of a product type.</p>
 
-<p>Dually \(Hask\) has all finite coproducts (initial object is set to be empty coproduct), which follows from existence of <code class="language-plaintext highlighter-rouge">Either</code>. Again from monoidal structure \((Hask, Either, Void)\) we derive that parens-free notation is legal.</p>
+<p>Dually \(Hask\) has all finite coproducts (initial object is set to be empty coproduct), which follows from the existence of <code class="language-plaintext highlighter-rouge">Either</code>. Again from monoidal structure \((Hask, Either, Void)\) we derive that parens-free notation is legal.</p>
 
-<p>In Haskell coproducts are written as</p>
+<p>In Haskell, coproducts are written as</p>
 <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">data</span> <span class="kt">C3</span> <span class="o">=</span> <span class="kt">Cons1</span> <span class="n">a</span> <span class="o">|</span> <span class="kt">Cons2</span> <span class="n">b</span> <span class="o">|</span> <span class="kt">Cons3</span> <span class="n">c</span>
 </code></pre></div></div>
-<p>This is an example of sum type.</p>
+<p>This is an example of a sum type.</p>
 
-<p>How consider two types:</p>
+<p>Now consider two types:</p>
 <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">type</span> <span class="kt">Mix1</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="kt">Either</span> <span class="n">b</span> <span class="n">c</span><span class="p">)</span>
 </code></pre></div></div>
 <p>and</p>
@@ -204,14 +204,14 @@ This proof may also require some methods which were not mentioned in the text.</
 <span class="n">mix2toMix1</span> <span class="p">(</span><span class="kt">Left</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="kt">Left</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">mix2toMix1</span> <span class="p">(</span><span class="kt">Right</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">))</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="kt">Right</span> <span class="n">c</span><span class="p">)</span>
 </code></pre></div></div>
-<p>This isomorphism inductively generalises to arbitrary finite coproducts.</p>
+<p>This isomorphism inductively generalizes to arbitrary finite coproducts.</p>
 
 <p>We have that tensor product <code class="language-plaintext highlighter-rouge">(,)</code> distributes with finite coproducts.</p>
 
-<p>Assume we have arbitrary symmetric monoidal category with tensor product distributive over finite coproducts (frequently denoted as <em>symmetric monoidal category with finite coproducts</em>).
+<p>Assume we have an arbitrary symmetric monoidal category with tensor product distributive over finite coproducts (frequently denoted as <em>symmetric monoidal category with finite coproducts</em>).
 Consider classes of isomorphic types and denote binary product as \(\cdot\), binary coproduct as \(+\), terminal object as \(1\), and initial object as \(0\).</p>
 
-<p>Laws of monoidal categories we have built can be rewritten as follows:</p>
+<p>The laws of monoidal categories we have built can be rewritten as follows:</p>
 <ul>
   <li>
 \[(a+b)+c=a+(b+c)\]
@@ -238,17 +238,17 @@ Consider classes of isomorphic types and denote binary product as \(\cdot\), bin
 <p><strong>Proposition:</strong> For any object \(a\) \(0 \cdot a = 0\). I.e. \(0 \cdot a\) is an initial object.
 Proof by reference to <a href="https://ncatlab.org/nlab/show/distributive+category">ncatlab: Proposition 2.2</a>.</p>
 
-<p>For category of finite sets this construction yields semiring of natural numbers, as Qiaochu Yuan <a href="https://math.stackexchange.com/questions/2582771/relationship-between-algebraic-data-types-and-the-set-of-real-numbers#comment5333054_2582817">points</a> out. This is an easy exercise and we can compare it with notation of finite ordinals used to compactly denote finite products at the start of the post.</p>
+<p>For the category of finite sets, this construction yields the semiring of natural numbers, as Qiaochu Yuan <a href="https://math.stackexchange.com/questions/2582771/relationship-between-algebraic-data-types-and-the-set-of-real-numbers#comment5333054_2582817">points</a> out. This is an easy exercise and we can compare it with the notation of finite ordinals used to compactly denote finite products at the start of the previous post.</p>
 
 <p>We have also just shown that isomorphism classes of objects in \(Hask\) as a symmetric monoidal category with finite coproducts form a commutative semiring.</p>
 
-<p>So do Haskell types. This construction seems to me a good answer to question why algebraic types are algebraic.</p>
+<p>So do Haskell types. This construction seems to be a good answer to the question of why algebraic types are algebraic.</p>
 
-<p>Actually we have not constructed algebraic types since we excluded recursive types. And there is a valid question if given semigroup structure extends to the whole class of algebraic types. But we did not rely on nature of elements while proving general statement, so there is nothing to raise a problem. Recursive types deserve at least a separate post.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">Platonic Hask overview: representable functors and monoidal category structures</title><link href="http://localhost:4000/blog/platonic-hask-overview-monoidal-category-structure" rel="alternate" type="text/html" title="Platonic Hask overview: representable functors and monoidal category structures" /><published>2023-02-23T00:00:00+01:00</published><updated>2023-02-23T00:00:00+01:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-monoidal-category-structure</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-monoidal-category-structure"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
+<p>Actually, we have not constructed algebraic types since we excluded recursive types. And there is a valid question if the given semigroup structure extends to the whole class of algebraic types. But we did not rely on the nature of elements while proving a general statement, so there is nothing to raise a problem. Recursive types deserve at least a separate post.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">Platonic Hask overview: representable functors and monoidal category structures</title><link href="http://localhost:4000/blog/platonic-hask-overview-monoidal-category-structure" rel="alternate" type="text/html" title="Platonic Hask overview: representable functors and monoidal category structures" /><published>2023-02-23T00:00:00+01:00</published><updated>2023-02-23T00:00:00+01:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-monoidal-category-structure</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-monoidal-category-structure"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
 
-<p>In previous post I promised to justify change of signature of <code class="language-plaintext highlighter-rouge">fmap</code> from <code class="language-plaintext highlighter-rouge">(a -&gt; b) -&gt; f a -&gt; f b</code> from <code class="language-plaintext highlighter-rouge">Prelude</code> to <code class="language-plaintext highlighter-rouge">(a -&gt; b) -&gt; (f a -&gt; f b)</code>. And occasionally explain the former notation. There is a categorical notion to help, it is called Cartesian closedness.</p>
+<p>In the previous post, I promised to justify the change of signature of <code class="language-plaintext highlighter-rouge">fmap</code> from <code class="language-plaintext highlighter-rouge">(a -&gt; b) -&gt; f a -&gt; f b</code> from <code class="language-plaintext highlighter-rouge">Prelude</code> to <code class="language-plaintext highlighter-rouge">(a -&gt; b) -&gt; (f a -&gt; f b)</code>. And occasionally explain the former notation. There is a categorical notion to help, it is called Cartesian closedness.</p>
 
-<p>Here we leave indices of \(\operatorname{Hom}\)-sets to context, same for definitions of objects — each subsection operates fixed category.</p>
+<p>Here we leave indices of \(\operatorname{Hom}\)-sets to context, same for definitions of objects — each subsection operates a fixed category.</p>
 
 <h4 id="cartesian-closedness">Cartesian closedness</h4>
 
@@ -266,7 +266,7 @@ Proof by reference to <a href="https://ncatlab.org/nlab/show/distributive+catego
 
 <p>Write this definition: \(\forall Y\; Hom(Y, A \times B) \cong \operatorname{Hom}(Y,A) \times \operatorname{Hom}(Y,B)\).</p>
 
-<p>By setting \(Y = A \times B\) we obtain via this isomorphism pair of maps \(\pi_A : A \times B \to A\) and \(\pi_B : A \times B \to B\) which are image of \(Id_{A \times B}\) under isomorphism. They are called <strong>canonical projections</strong>. For arbitrary \(Y\) this isomorphism guarantees existence and uniqueness of map \(\phi : Y \to A \times B\) for any pair of maps \(\psi_A : Y \to A\) and \(\psi_B : Y \to B\). There are maps \(\pi_A \circ \phi\) and \(\pi_B \circ \phi\), since isomorphism is natural, \(\pi_A \circ \phi = \psi_A\), \(\pi_B \circ \phi = \psi_B\).</p>
+<p>By setting \(Y = A \times B\), we obtain via this isomorphism the pair of maps \(\pi_A : A \times B \to A\) and \(\pi_B : A \times B \to B\) which are the image of \(Id_{A \times B}\) under isomorphism. They are called <strong>canonical projections</strong>. For arbitrary \(Y\) this isomorphism guarantees existence and uniqueness of map \(\phi : Y \to A \times B\) for any pair of maps \(\psi_A : Y \to A\) and \(\psi_B : Y \to B\). There are maps \(\pi_A \circ \phi\) and \(\pi_B \circ \phi\), since isomorphism is natural, \(\pi_A \circ \phi = \psi_A\), \(\pi_B \circ \phi = \psi_B\).</p>
 
 <p>Thus we obtain the universal property of a product:</p>
 
@@ -276,29 +276,29 @@ Proof by reference to <a href="https://ncatlab.org/nlab/show/distributive+catego
 
 <p>Consider constant functor \(\overline{\{0\}}\) moving all objects to a fixed singleton set and all morphisms to identity. We call representing object of \(\overline{\{0\}}\) <strong>terminal object</strong> of category \(\mathrm{C}\). By evaluating its universal property we have that it is the object \(T\) with exactly one morphism \(Y \to T\) for any \(Y\).</p>
 
-<p>Assume \(\mathrm{C}\) has all binary products. Consider functor \(\operatorname{Hom}(\_ \times A, B)\). Its representing object \(B^A\) is called <strong>exponential object</strong>. Actually we defined it via isomorphism \(\operatorname{Hom}(Y, B^A) \cong \operatorname{Hom}(Y \times A, B)\) which may look familiar.</p>
+<p>Assume \(\mathrm{C}\) has all binary products. Consider functor \(\operatorname{Hom}(\_ \times A, B)\). Its representing object \(B^A\) is called <strong>exponential object</strong>. Actually, we defined it via isomorphism \(\operatorname{Hom}(Y, B^A) \cong \operatorname{Hom}(Y \times A, B)\) which may look familiar.</p>
 
 <p>By taking \(Y = B^A\) we obtain map \(eval : B^A \times A \to B\). We can draw the universal property:</p>
 
 <p><img src="/assets/expprop.svg" alt="expprop" /></p>
 
-<p>Usually terminal objects and products are defined in terms of limits. But limits are examples of representing object and are not really important here. We will turn back to them later.</p>
+<p>Usually, terminal objects and products are defined in terms of limits. But limits are examples of representing objects and are not really important here. We will turn back to them later.</p>
 
 <h5 id="hask-is-cartesian-closed">Hask is cartesian closed</h5>
 
-<p>To prove the statement in the header we have to demonstrate terminal object, exponentials and products.</p>
+<p>To prove the statement in the header we have to demonstrate the terminal object, exponentials, and products.</p>
 
-<p>Since morphisms in \(Hask\) do not have to preserve any structure the only candidates for terminal object are types with single term. These are types isomorphic to <code class="language-plaintext highlighter-rouge">()</code>. They are all isomorphic (admit invertible bijections between each other), hence there is no need to check universality.</p>
+<p>Since morphisms in \(Hask\) do not have to preserve any structure the only candidates for the terminal object are types with a single term. These are types isomorphic to <code class="language-plaintext highlighter-rouge">()</code>. They are all isomorphic (admit invertible bijections between each other), hence there is no need to check universality.</p>
 
-<p>Evaluation map of exponential object suggests object satisfying universal property for types <code class="language-plaintext highlighter-rouge">a, b</code> — it is <code class="language-plaintext highlighter-rouge">a -&gt; b</code>. Products are given by type with two natural projections — <code class="language-plaintext highlighter-rouge">(a,b)</code>. Since universal objects are defined up to natural isomorphisms, product types <code class="language-plaintext highlighter-rouge">data Cons = Cons B C</code> are also products, same for newtypes over arrow types etc.</p>
+<p>The evaluation map of the exponential object suggests an object satisfying universal property for types <code class="language-plaintext highlighter-rouge">a, b</code> — it is <code class="language-plaintext highlighter-rouge">a -&gt; b</code>. Products are given by type with two natural projections — <code class="language-plaintext highlighter-rouge">(a,b)</code>. Since universal objects are defined up to natural isomorphisms, product types <code class="language-plaintext highlighter-rouge">data Cons = Cons B C</code> are also products, same for newtypes over arrow types, etc.</p>
 
 <p>Definition of exponential object gives us a natural isomorphism <code class="language-plaintext highlighter-rouge">(a,b) -&gt; c</code> \(\cong\) <code class="language-plaintext highlighter-rouge">a -&gt; (b -&gt; c)</code> for any types <code class="language-plaintext highlighter-rouge">a, b, c</code>. This isomorphism is called currying. In Haskell it is common and is reflected in both implementation and notation — type <code class="language-plaintext highlighter-rouge">a -&gt; b -&gt; c</code> is literally equivalent to <code class="language-plaintext highlighter-rouge">a -&gt; (b -&gt; c)</code> (which is known as partial evaluation) and is isomorphic to <code class="language-plaintext highlighter-rouge">(a,b) -&gt; c</code> via inverse functions <code class="language-plaintext highlighter-rouge">curry</code> and <code class="language-plaintext highlighter-rouge">uncurry</code>.</p>
 
-<p>There is an important proposition that any cartesian closed category is closed symmetric monoidal category with tensor product given by product in sense of given universal property.</p>
+<p>There is an important proposition that any cartesian closed category is a closed symmetric monoidal category with the tensor product given by the product in the sense of given universal property.</p>
 
-<p>Closedness (informally) means that homsets can be considered as objects of the category. Again informally we can see it from existence of exponentials — their elements are functions from <code class="language-plaintext highlighter-rouge">a</code> to <code class="language-plaintext highlighter-rouge">b</code>, elements of \(Hom\)-sets are morphisms from <code class="language-plaintext highlighter-rouge">a</code> to <code class="language-plaintext highlighter-rouge">b</code>. Term <code class="language-plaintext highlighter-rouge">closed monoidal category</code> encapsulates some compatibility condition between tensor product and exponentials. Rigorous definitions and a proof of the claimed proposition worth a separate post which will be written.</p>
+<p>Closedness (informally) means that hom-sets can be considered objects of the category. Again informally we can see it from the existence of exponentials — their elements are functions from <code class="language-plaintext highlighter-rouge">a</code> to <code class="language-plaintext highlighter-rouge">b</code>, and elements of \(Hom\)-sets are morphisms from <code class="language-plaintext highlighter-rouge">a</code> to <code class="language-plaintext highlighter-rouge">b</code>. The term <code class="language-plaintext highlighter-rouge">closed monoidal category</code> encapsulates some compatibility conditions between the tensor product and exponentials. Rigorous definitions and proof of the claimed proposition are worth a separate post to be written.</p>
 
-<p>So let’s proceed to definition of symmetric monoidal category.</p>
+<p>So let’s proceed to the definition of the symmetric monoidal category.</p>
 
 <h4 id="monoidal-category-structure">Monoidal category structure</h4>
 
@@ -329,11 +329,11 @@ Proof by reference to <a href="https://ncatlab.org/nlab/show/distributive+catego
 
 <p>Consider \(End(Hask)\). It is a monoidal category with tensor product given by composition, unit — by <code class="language-plaintext highlighter-rouge">Identity</code> functor, and with identical unitors and associator. Denote this structure as \((End(Hask),\circ,Id)\).</p>
 
-<p>These two statements will be central in next two posts.</p>
+<p>These two statements will be central in the next several posts.</p>
 
 <h4 id="dual-counterparts">Dual counterparts</h4>
 
-<p>Universal properties allows us to construct dual objects by formally reversing all arrows.</p>
+<p>Universal properties allow us to construct dual objects by formally reversing all arrows.</p>
 
 <p>While doing it with already defined representing objects we obtain the following definitions:</p>
 
@@ -350,12 +350,12 @@ Proof by reference to <a href="https://ncatlab.org/nlab/show/distributive+catego
 
 <p><img src="/assets/coexp.svg" alt="coexp" /></p>
 
-<p>Category with initial object, all coexponentials and all binary coproducts is called <strong>cocartesian coclosed</strong>.</p>
+<p>Category with an initial object, all coexponentials, and all binary coproducts is called <strong>cocartesian coclosed</strong>.</p>
 
 <p>\(Hask\) does not have all coexponentials and is not cocartesian coclosed.</p>
 
-<p>But it has all coproducts given by <code class="language-plaintext highlighter-rouge">Either a b</code> and it has initial object <code class="language-plaintext highlighter-rouge">Void</code>.
-This data is enough to equip \(Hask\) with another structure of symmetric (since coproducts are symmetric) monoidal category. Tensor product is given by coproduct and unit is given by initial object. Denote this structure as \((Hask, Either, Void)\).</p>
+<p>But it has all coproducts given by <code class="language-plaintext highlighter-rouge">Either a b</code> and it has the initial object <code class="language-plaintext highlighter-rouge">Void</code>.
+This data is enough to equip \(Hask\) with another structure of symmetric (since coproducts are symmetric) monoidal category. The tensor product is given by the coproduct and the unit is given by the initial object. Denote this structure as \((Hask, Either, Void)\).</p>
 
 <h4 id="note-on-corepresentable-functors">Note on corepresentable functors</h4>
 
@@ -365,7 +365,7 @@ This data is enough to equip \(Hask\) with another structure of symmetric (since
 
 <p>Initial object corepresents \(\operatorname{Hom}(\emptyset, \_)\), \(A \coprod B\) corepresents \(\operatorname{Hom}(A,\_) \otimes \operatorname{Hom}(B,\_)\), coexponential corepresents \(\operatorname{Hom}(B, \_ \coprod A)\).</p>
 
-<p>In \(Hask\) \(\operatorname{Hom}(A,\_)\) is written as <code class="language-plaintext highlighter-rouge">(-&gt;) A</code>. We can restrict functors to instances of <code class="language-plaintext highlighter-rouge">Functor</code> type class and obtain the following definition of representable functor: functor <code class="language-plaintext highlighter-rouge">F</code> is said to be representable if there exists natural isomorphism between <code class="language-plaintext highlighter-rouge">F a</code> and <code class="language-plaintext highlighter-rouge">(-&gt;) A a</code> for every type <code class="language-plaintext highlighter-rouge">a</code>. <code class="language-plaintext highlighter-rouge">A</code> is corepresenting object of <code class="language-plaintext highlighter-rouge">F</code>. But <code class="language-plaintext highlighter-rouge">F</code> must be considered as a functor to Set with values — sets of terms of resulting types of <code class="language-plaintext highlighter-rouge">Functor</code> we started with instead of types.</p>
+<p>In \(Hask\) \(\operatorname{Hom}(A,\_)\) is written as <code class="language-plaintext highlighter-rouge">(-&gt;) A</code>. We can restrict functors to instances of the <code class="language-plaintext highlighter-rouge">Functor</code> type class and obtain the following definition of representable functor: functor <code class="language-plaintext highlighter-rouge">F</code> is said to be representable if there exists a natural isomorphism between <code class="language-plaintext highlighter-rouge">F a</code> and <code class="language-plaintext highlighter-rouge">(-&gt;) A a</code> for every type <code class="language-plaintext highlighter-rouge">a</code>. <code class="language-plaintext highlighter-rouge">A</code> is the corepresenting object of <code class="language-plaintext highlighter-rouge">F</code>. But <code class="language-plaintext highlighter-rouge">F</code> must be considered as a functor to Set with values — sets of terms of resulting types of <code class="language-plaintext highlighter-rouge">Functor</code> we started with instead of types.</p>
 
 <p>This definition is captured in package <a href="https://hackage.haskell.org/package/representable-functors-3.2.0.2/docs/Data-Functor-Representable.html">representable-functors</a>. Isomorphism <code class="language-plaintext highlighter-rouge">Cons a ~ A -&gt; a</code> in terms of this library is written as <code class="language-plaintext highlighter-rouge">f a ~ Key a -&gt; a</code>, to the left it is given by <code class="language-plaintext highlighter-rouge">tabulate</code>, to the right by <code class="language-plaintext highlighter-rouge">index</code>.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">Incident report</title><link href="http://localhost:4000/blog/rebuild" rel="alternate" type="text/html" title="Incident report" /><published>2023-02-20T21:27:00+01:00</published><updated>2023-02-20T21:27:00+01:00</updated><id>http://localhost:4000/blog/rebuild</id><content type="html" xml:base="http://localhost:4000/blog/rebuild"><![CDATA[<p>Since evening of Friday 17.02.2023 the site was unavailable due to problem at the hosting side.</p>
 
@@ -675,14 +675,14 @@ It runs about six times faster than the naive one.</p>
 is an important side-effect. Latest algorithm can be easily rewritten in
 C and be run on specific hardware. And these operations are important
 not only for discrete signal transmission but are also crucial for all
-symmetric cryptography.</p>]]></content><author><name></name></author><category term="math-gm" /><summary type="html"><![CDATA[I have recently attended perfect course in coding theory by Valery Gritsenko. And being inspired by it I want to tell a story related to both algebra and hardware engineering.]]></summary></entry><entry><title type="html">Platonic Hask overview: subcategories, functors and natural transformations</title><link href="http://localhost:4000/blog/platonic-hask-overview-subcategories-functors-and-natural-transformations" rel="alternate" type="text/html" title="Platonic Hask overview: subcategories, functors and natural transformations" /><published>2022-08-17T00:00:00+02:00</published><updated>2022-08-17T00:00:00+02:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-subcategories-functors-and-natural-transformations</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-subcategories-functors-and-natural-transformations"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
+symmetric cryptography.</p>]]></content><author><name></name></author><category term="math-gm" /><summary type="html"><![CDATA[I have recently attended perfect course in coding theory by Valery Gritsenko. And being inspired by it I want to tell a story related to both algebra and hardware engineering.]]></summary></entry><entry><title type="html">Platonic Hask overview: subcategories, functors, and natural transformations</title><link href="http://localhost:4000/blog/platonic-hask-overview-subcategories-functors-and-natural-transformations" rel="alternate" type="text/html" title="Platonic Hask overview: subcategories, functors, and natural transformations" /><published>2022-08-17T00:00:00+02:00</published><updated>2022-08-17T00:00:00+02:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-subcategories-functors-and-natural-transformations</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-subcategories-functors-and-natural-transformations"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
 
-<p>We have constructed the category of restricted Haskell types. It gave us a coherent notion of a composition. But it’s not enough. The major strength of Haskell is its separation of computations of different nature. So we need to be able at least to cluster types into objects with common property. Let’s develop machinery to deal with it.</p>
+<p>We have constructed the category of restricted Haskell types. It gave us a coherent notion of composition. But it’s not enough. The major strength of Haskell is its separation of computations of different natures. So we need to be able at least to cluster types into objects with some common property. Let’s develop machinery to deal with it.</p>
 
 <p>Consider categories \(\mathrm{C}\) and \(\mathrm{D}\) with pair of mappings \(F_{\operatorname{Ob}} : \operatorname{Ob}(\mathrm{C}) \to \operatorname{Ob}(\mathrm{D})\) and \(F_{\operatorname{Hom}}\) with one of the
 following signatures: \(\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(A),F_{\operatorname{Ob}}(B))\) or \(\operatorname{Hom}_{\mathrm{C}}(A,B) \to \operatorname{Hom}_{\mathrm{D}}(F_{\operatorname{Ob}}(B),F_{\operatorname{Ob}}(A))\) — mapping of all morphisms of a category, defined on each Hom-set.</p>
 
-<p>We can construct a pair \(F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})\). Its definition contains all data necessary to define map between categories. But composition of such maps is not well-defined (check it). It can be fixed by the following definitions:</p>
+<p>We can construct a pair \(F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})\). Its definition contains all data necessary to define a map between categories. But the composition of such maps is not well-defined (check it). It can be fixed by the following definitions:</p>
 
 <h5 id="definitions">Definitions</h5>
 
@@ -696,7 +696,7 @@ commutes:</p>
 
 <p><img src="/assets/cofunctor.svg" alt="functor" /></p>
 
-<p>These two definitions are related to notion of <strong>dual category</strong> —
+<p>These two definitions are related to the notion of <strong>dual category</strong> —
 category \(\mathrm{C}^{op}\) is constructed from \(\mathrm{C}\) by formally reverting all arrows in a
 diagram of \(\mathrm{C}\). This notion allows us to identify contravariant functor \(F : \mathrm{C} \to \mathrm{D}\) with covariant \(F^{op} : \mathrm{C} \to \mathrm{D}^{op}\).</p>
 
@@ -709,7 +709,7 @@ bijective — <strong>fully faithful</strong>.</p>
 
 <p>Categories \(\mathrm{C}\) and \(\mathrm{D}\) are said to be equivalent if there exists fully faithful functor \(F : \mathrm{C} \to \mathrm{D}\) such that every object of \(\mathrm{D}\) is isomorphic to \(F(A)\) for some \(A \in \operatorname{C}\).</p>
 
-<p>We have constructed the category and consider its internal
+<p>We have constructed the category and can consider its internal
 structure. Functors from category to itself are called <strong>endofunctors</strong>.
 However, it may be convenient to talk about subcategories in \(Hask\) and about
 functors to them.</p>
@@ -726,10 +726,10 @@ functors to them.</p>
 
 <h5 id="example-functor-typeclass-and-parametric-types">Example: Functor typeclass and parametric types</h5>
 
-<p>Consider declaration of new data type like
+<p>Consider the declaration of new data type like
 <code class="language-plaintext highlighter-rouge">data Either a b = Left a | Right b</code>.</p>
 
-<p>There are several possible constructions of \(Hask\)-endofunctor arising from this definition. Two most natural are defined here:</p>
+<p>There are several possible constructions of \(Hask\)-endofunctor arising from this definition. The two most natural are defined here:</p>
 
 <ol>
   <li>\(Left_{\operatorname{Ob}}(a : a)\) = <code class="language-plaintext highlighter-rouge">Left a</code>; \(Left_{\operatorname{Hom}}(f : a \to c)\) = <code class="language-plaintext highlighter-rouge">(\Left a -&gt; Left (f a))</code>.</li>
@@ -738,10 +738,10 @@ functors to them.</p>
 
 <p>Both of them are well-defined covariant faithful functors in \(Hask\).</p>
 
-<p>Moreover, each parametric type form a full subcategory in \(Hask\), hence these
-functors can be considered as \(Hask \to Either\). Or 2. can be considered as functor \(Hask \to Either\;a\). And there are corresponding embedding functors to other direction.</p>
+<p>Moreover, each parametric type forms a full subcategory in \(Hask\), hence these
+functors can be considered as \(Hask \to Either\). Or 2. can be considered as functor \(Hask \to Either\;a\). And there are corresponding embedding functors in other directions.</p>
 
-<p>However, only \(Right\) is supported by valid <code class="language-plaintext highlighter-rouge">Functor</code> instance in Haskell.
+<p>However, only \(Right\) is supported by a valid <code class="language-plaintext highlighter-rouge">Functor</code> instance in Haskell.
 Instance for <code class="language-plaintext highlighter-rouge">Either</code>:</p>
 
 <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">instance</span> <span class="kt">Functor</span> <span class="p">(</span><span class="kt">Either</span> <span class="n">c</span><span class="p">)</span> <span class="kr">where</span>
@@ -750,16 +750,14 @@ Instance for <code class="language-plaintext highlighter-rouge">Either</code>:</
   <span class="n">fmap</span> <span class="n">f</span> <span class="p">(</span><span class="kt">Right</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="kt">Right</span> <span class="p">(</span><span class="n">f</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Note: <code class="language-plaintext highlighter-rouge">fmap</code> defines action of functor on morphisms. We change <code class="language-plaintext highlighter-rouge">Prelude</code> definition for now — it is valid and will be justified in the next post.</p>
+<p>Note: <code class="language-plaintext highlighter-rouge">fmap</code> defines the action of functor on morphisms. We change the <code class="language-plaintext highlighter-rouge">Prelude</code> definition for now — it is valid and will be justified in the next post.</p>
 
-<p>Laws of <code class="language-plaintext highlighter-rouge">Functor</code> typeclass represent usual definition of functor via following diagram:
+<p>Laws of the <code class="language-plaintext highlighter-rouge">Functor</code> typeclass represent the usual definition of functor via the following diagram:
 <img src="/assets/hasfunctor.svg" alt="haskfunctor" /></p>
 
-<p>Haskell does not allow to define <code class="language-plaintext highlighter-rouge">Functor</code>s over non-terminal parameters in its own terms.</p>
+<p>Haskell does not allow to define <code class="language-plaintext highlighter-rouge">Functor</code> instances over non-terminal parameters in its own terms.</p>
 
-<p>Note that uniqueness and derivability of <code class="language-plaintext highlighter-rouge">Functor</code> is not an elementary
-question. Since it’s not a question of category theory, let me refer to
-<a href="https://stackoverflow.com/questions/19774904/are-functor-instances-unique">SO</a>.</p>
+<p>Note that the uniqueness and derivability of <code class="language-plaintext highlighter-rouge">Functor</code> is not an elementary question. Since it’s not a question of category theory, let me refer to <a href="https://stackoverflow.com/questions/19774904/are-functor-instances-unique">SO</a>.</p>
 
 <p>Yet another restriction on Haskell <code class="language-plaintext highlighter-rouge">Functor</code> typeclass is that it does
 not allow functors between nontrivial subcategories of \(Hask\).</p>
@@ -777,9 +775,9 @@ side:</p>
 
 <p>\(ML_{\operatorname{Hom}}\) = <code class="language-plaintext highlighter-rouge">\f -&gt; </code><code class="language-plaintext highlighter-rouge">maybeToList</code><code class="language-plaintext highlighter-rouge"> . f . listToMaybe</code>.</p>
 
-<p>It’s easy to check that functor \(toList : Vector \to []\) with similar definition makes subcategories of vectors and of lists equivalent.</p>
+<p>It’s easy to check that functor \(toList : Vector \to []\) with a similar definition makes subcategories of vectors and lists equivalent.</p>
 
-<p>All three these functors are not endofunctors in \(Hask\) since they are not everywhere defined.</p>
+<p>All three of these functors are not endofunctors in \(Hask\) since they are not everywhere defined.</p>
 
 <h5 id="example-hom-functors">Example: Hom-functors</h5>
 
@@ -801,7 +799,7 @@ only exist <code class="language-plaintext highlighter-rouge">Functor</code> ins
 
 <p>Let’s define alternating type <code class="language-plaintext highlighter-rouge">&lt;-</code> isomorphic to <code class="language-plaintext highlighter-rouge">(-&gt;) b a</code>.</p>
 
-<p>For this type we can define instance of
+<p>For this type, we can define an instance of
 <a href="https://hackage.haskell.org/package/contravariant-1.4/docs/Data-Functor-Contravariant.html">Contravariant</a>,
 which represent contravariant functors.</p>
 
@@ -818,20 +816,20 @@ which represent contravariant functors.</p>
 
 <ul>
   <li>Forgetful functors from category to \(Set\) — ones forgetting all the
-structure imposed on objects and morphisms. For example, forgetful
-functor from category of groups \(Grp\) moves group to set of its elements
+structure imposed on objects and morphisms. For example, a forgetful
+functor from the category of groups \(Grp\) moves a group to a set of its elements
 and homomorphism to itself as a function between sets.</li>
-  <li>Free functors from \(Set\) to some category — ones which allow to impose
-defining relations of a category on a set and thus define free
+  <li>Free functors from \(Set\) to some category — ones which allow to force
+the defining relations of a category on a set and thus define a free
 object in a category. For example, free functor from \(Set\) to \(Grp\) yields the
 group called free with presentation \(set \mapsto \{set\;|\;\emptyset\}\).</li>
-  <li>Tensor product with fixed object (left or right).</li>
+  <li>The tensor product with a fixed object (left or right).</li>
   <li>To say it out — basic example is identity functor.</li>
 </ul>
 
 <p>All these functors are relevant to \(Hask\).</p>
 
-<p>Let’s take a look at introduced structures. At the level of types we have types and morphisms between them. Morphisms can be surjective, injective or bijective, in last case they are isomorphisms. Now we turn to level of subcategories of \(Hask\) and we have functors with their own properties. These properties are finer than propeties of Set-level morphisms but they are similar in spirit.</p>
+<p>Let’s take a look at the introduced structures. At the level of types, we have types and morphisms between them. Morphisms can be surjective, injective, or bijective, in the last case they are isomorphisms. Now we turn to the level of subcategories of \(Hask\) and we have functors with their own properties. These properties are finer than properties of Set-level morphisms but they are similar in spirit.</p>
 
 <p>At the moment we can take one of two steps:</p>
 <ol>
@@ -839,7 +837,7 @@ group called free with presentation \(set \mapsto \{set\;|\;\emptyset\}\).</li>
   <li>Deep: try to stack the next layer and define morphisms between functors.</li>
 </ol>
 
-<p>For now we follow the second path.</p>
+<p>For now, we follow the second path.</p>
 
 <h5 id="definition-1">Definition</h5>
 
@@ -850,17 +848,17 @@ morphisms in \(\mathrm{D}\) <strong>natural transformation</strong> from \(F\) t
 
 <p>If both functors are contravariant, vertical arrows are reversed.</p>
 
-<p>This definition lets us to see \(LM\)-functor from the other side — as
-natural transformation between endofunctors \([]\) and \(Maybe\). Naturality is checked
+<p>This definition lets us see \(LM\)-functor from the other side — as
+a natural transformation between endofunctors \([]\) and \(Maybe\). Naturality is checked
 by the same reasoning as being a functor.</p>
 
-<p>Haskell ecosystem contains several packages trying to express natural
+<p>The Haskell ecosystem contains several packages trying to express natural
 transformation. For example, <a href="https://hackage.haskell.org/package/natural-transformation">natural-transformation</a>
 package.</p>
 
 <p>It’s worth noting that popular <a href="https://hackage.haskell.org/package/servant-server-0.10/docs/Servant-Server.html#v:enter">servant (0.10, link to enter
 function)</a>
-web-framework used to use explicitly typed natural transformations very
+web framework used to use explicitly typed natural transformations very
 close to its user interface for a long time. Here is how it was used:
 <a href="https://docs.servant.dev/en/v0.10/tutorial/Server.html">v0.10 tutorial</a></p>
 
@@ -868,15 +866,15 @@ close to its user interface for a long time. Here is how it was used:
 
 <p>Functors (covariant without loss of generality) between tho categories \(\mathrm{C}\) and \(\mathrm{D}\) with objects — functors and morphisms — natural transformations form a category.</p>
 
-<p>This is well-known statement not about \(Hask\) with obvious proof by construction, so it will not be given.</p>
+<p>This is a well-known statement not about \(Hask\) with obvious proof by construction, so it will not be given.</p>
 
-<p>Note that in example above \(LM \circ ML = Id_{Maybe}\).</p>
+<p>Note that in the example above \(LM \circ ML = Id_{Maybe}\).</p>
 
 <p>This category of functors is denoted as \(\operatorname{Fun}(\mathrm{C},\mathrm{D})\). \(\operatorname{Fun}(\mathrm{C},\mathrm{C})\) has a more convenient synonym — \(\operatorname{End}(\mathrm{C})\) and is called category of endofunctors of \(\mathrm{C}\).</p>
 
 <p>We come up with another notable object we will use in the future — category \(\operatorname{End}(Hask)\) of endofunctors of \(Hask\).</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">Platonic Hask overview: construction of the category</title><link href="http://localhost:4000/blog/platonic-hask-overview-construction-of-the-category" rel="alternate" type="text/html" title="Platonic Hask overview: construction of the category" /><published>2022-08-10T20:00:00+02:00</published><updated>2022-08-10T20:00:00+02:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-construction-of-the-category</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-construction-of-the-category"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
 
-<p>Let’s start with basic definition:</p>
+<p>Let’s start with a basic definition:</p>
 
 <h5 id="definition">Definition</h5>
 
@@ -898,11 +896,11 @@ close to its user interface for a long time. Here is how it was used:
 
 <h5 id="examples">Examples</h5>
 
-<p>Basic example of a category is \(Set\) — category with objects — sets and morphisms — functions between sets. This example will be widely used.</p>
+<p>A basic example of a category is \(Set\) — category with objects — sets and morphisms — functions between sets. This example will be widely used.</p>
 
 <p>Another good example — category of vector spaces with homomorphisms as morphisms. This category has less in common with what we do here.</p>
 
-<p>We want to construct reasonable category out of Haskell types. We might want to construct reasonable category out of abstract types. For this purpose Haskell is a good yardstick and support — it was designed with respect to category theory and we can go far by judging existence of some constructions in our category by existence of their GHC implementations.</p>
+<p>We want to construct a reasonable category out of Haskell types. We might want to construct a reasonable category out of abstract types. For this purpose Haskell is a good yardstick and support — it was designed with respect to category theory and we can go far by judging the existence of some constructions in our category by the existence of their GHC implementations.</p>
 
 <p><strong>First attempt</strong></p>
 
@@ -911,18 +909,17 @@ close to its user interface for a long time. Here is how it was used:
 <p>It is not a category — <code class="language-plaintext highlighter-rouge">seq undefined () = _|_</code> and
 <code class="language-plaintext highlighter-rouge">seq (undefined . id) () = ()</code>, hence <code class="language-plaintext highlighter-rouge">undefined</code> \(\neq\) <code class="language-plaintext highlighter-rouge">undefined . id</code>. See
 <a href="http://math.andrej.com/2016/08/06/hask-is-not-a-category/">post by Andrej Bauer and discussion</a>.
-<a href="https://wiki.haskell.org/Hask">Haskell wiki</a> knows several more examples where bottom breaks abstractions.</p>
+<a href="https://wiki.haskell.org/Hask">Haskell wiki</a> knows several more examples where the bottom breaks abstractions.</p>
 
-<p>Failure of this attempt makes whole categorical reasoning about Haskell limited but still useful. Unfortunately, real world is contradictory.</p>
+<p>Failure of this attempt makes whole categorical reasoning about Haskell limited but still useful. Unfortunately, the real world is contradictory.</p>
 
 <p><strong>Second attempt</strong></p>
 
 <p>Consider \(\operatorname{Ob}(Hask)\) — Haskell types without \(\bot\) with natural \(\operatorname{Hom}\) sets — all functions between these platonic types excluding partial and nonterminating functions. To shorten notation here we overload terms of Haskell Wiki. <code class="language-plaintext highlighter-rouge">Wiki.Hask = Hask'; Wiki.Platonic Hask = Hask</code>.</p>
 
-<p>Note: I’m not using term “Maximal total subset of Haskell” in sense of
+<p>Note: I’m not using the term “Maximal total subset of Haskell” in the sense of
 <a href="https://en.wikipedia.org/wiki/Total_functional_programming">Wikipedia article</a>
-since I’m not talking about provability here. Functions we take seem not
-to have constructive definition and include broader range.</p>
+since I’m not talking about provability here. The set of functions we take seems not to have a constructive definition and is broader.</p>
 
 <h5 id="claim">Claim</h5>
 
@@ -930,10 +927,10 @@ to have constructive definition and include broader range.</p>
 
 <h5 id="proof">Proof</h5>
 
-<p>With assumption of totality and termination of all functions equational
+<p>With the assumption of totality and termination of all functions equational
 reasoning is legal (Church-Rosser property holds — it was the exact property broken by \(\bot\)).</p>
 
-<p>We only have to check properties of the composition:</p>
+<p>We only have to check the properties of the composition:</p>
 
 <ul>
   <li>Composition <a href="https://hackage.haskell.org/package/base-4.17.0.0/docs/src/GHC.Base.html#.">exists</a>.</li>
@@ -944,14 +941,14 @@ reasoning is legal (Church-Rosser property holds — it was the exact property b
     </ul>
   </li>
   <li>Identity <a href="https://hackage.haskell.org/package/base-4.17.0.0/docs/src/GHC.Base.html#id">exists</a>.</li>
-  <li><code class="language-plaintext highlighter-rouge">seq</code> in previous attempt violated identity law. Proof of the identity law by equational reasoning is trivial.</li>
+  <li><code class="language-plaintext highlighter-rouge">seq</code> in a previous attempt violated identity law. Proof of the identity law by equational reasoning is trivial.</li>
 </ul>
 
-<p>(1) in equations represents taking definition, (2) refers to \(\beta\)-reduction, in both cases we follow applicative order of evaluation. Equality is \(\alpha\)-congruence relation.</p>
+<p>(1) in equations represents taking definition, (2) refers to \(\beta\)-reduction, in both cases, we follow the applicative order of evaluation. Equality is \(\alpha\)-congruence relation.</p>
 
 <p>Following posts will operate \(Hask\).</p>
 
-<h5 id="remark">Remark</h5>
+<h5 id="remarks">Remarks</h5>
 
 <ol>
   <li>
@@ -969,15 +966,15 @@ reasoning is legal (Church-Rosser property holds — it was the exact property b
   </li>
 </ol>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">Platonic Hask overview: introduction</title><link href="http://localhost:4000/blog/platonic-hask-overview-introduction" rel="alternate" type="text/html" title="Platonic Hask overview: introduction" /><published>2022-08-10T10:00:00+02:00</published><updated>2022-08-10T10:00:00+02:00</updated><id>http://localhost:4000/blog/platonic-hask-overview-introduction</id><content type="html" xml:base="http://localhost:4000/blog/platonic-hask-overview-introduction"><![CDATA[<p><em><a href="https://viviag.io/tagged/hask/">To index of the series</a></em></p>
 
-<p>This post starts series of texts trying to explore category of Haskell
-types seen without impredicativity (platonic Hask).</p>
+<p>This post starts a series of texts trying to explore the category of Haskell
+types without impredicativity (platonic Hask).</p>
 
-<p>Despite series is probably more interesting for those who adopts Haskell
+<p>Despite the series is probably more interesting for those who adopt Haskell
 after category theory, I will try to recall all necessary definitions. I
 expect some level of mathematical culture to be comfortable with this
-series, otherwise it may become hard to read.</p>
+series, otherwise, it may become hard to read.</p>
 
-<p>Probably someone interprets it as sort of intro to category theory by example.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">dbmonitor-0.1.0 released!</title><link href="http://localhost:4000/blog/dbmonitor-0-1-0-released" rel="alternate" type="text/html" title="dbmonitor-0.1.0 released!" /><published>2022-08-08T00:00:00+02:00</published><updated>2022-08-08T00:00:00+02:00</updated><id>http://localhost:4000/blog/dbmonitor-0.1.0-released</id><content type="html" xml:base="http://localhost:4000/blog/dbmonitor-0-1-0-released"><![CDATA[<p>Initial release of a tool. See
+<p>Probably someone interprets it as a sort of intro to category theory by example.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">dbmonitor-0.1.0 released!</title><link href="http://localhost:4000/blog/dbmonitor-0-1-0-released" rel="alternate" type="text/html" title="dbmonitor-0.1.0 released!" /><published>2022-08-08T00:00:00+02:00</published><updated>2022-08-08T00:00:00+02:00</updated><id>http://localhost:4000/blog/dbmonitor-0.1.0-released</id><content type="html" xml:base="http://localhost:4000/blog/dbmonitor-0-1-0-released"><![CDATA[<p>Initial release of a tool. See
 <a href="https://hackage.haskell.org/package/dbmonitor">https://hackage.haskell.org/package/dbmonitor</a>.</p>
 
 <p>This is a database consistency monitoring tool with Telegram alerts. See
