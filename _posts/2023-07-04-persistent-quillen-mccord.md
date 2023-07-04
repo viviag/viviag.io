@@ -4,7 +4,7 @@ title: "Release: preprint on persistent homological Quillen-McCord theorem"
 tags: [math-at]
 ---
 
-[Here it is](http://www.blankwebsite.com/). Below is the story and the context of this work.
+[Here it is](https://arxiv.org/abs/2307.00177). Below is the story and the context of this work.
 
 ### Intro
 
