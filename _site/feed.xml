@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-03T00:35:47+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitalii Guzeev</title><subtitle>Blog and entry point to my online appearance</subtitle><entry><title type="html">Run to classifying spaces</title><link href="http://localhost:4000/blog/run-to-classifying-spaces" rel="alternate" type="text/html" title="Run to classifying spaces" /><published>2023-05-04T00:00:00+02:00</published><updated>2023-05-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/run-to-classifying-spaces</id><content type="html" xml:base="http://localhost:4000/blog/run-to-classifying-spaces"><![CDATA[<p>I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-04T07:52:44+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitalii Guzeev</title><subtitle>Blog and entry point to my online appearance</subtitle><entry><title type="html">Release: preprint on persistent homological Quillen-McCord theorem</title><link href="http://localhost:4000/blog/persistent-quillen-mccord" rel="alternate" type="text/html" title="Release: preprint on persistent homological Quillen-McCord theorem" /><published>2023-07-04T00:00:00+02:00</published><updated>2023-07-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/persistent-quillen-mccord</id><content type="html" xml:base="http://localhost:4000/blog/persistent-quillen-mccord"><![CDATA[<p><a href="https://arxiv.org/abs/2307.00177">Here it is</a>. Below is the story and the context of this work.</p>
+
+<h3 id="intro">Intro</h3>
+
+<p>In 2019, <a href="https://cs.hse.ru/en/">faculty of computer science at HSE</a> and personally <a href="https://www.ayzenberg.xyz/">Anton Ayzenberg</a> and <a href="https://www.hse.ru/en/org/persons/35919212">Vsevolod Chernyshev</a> organized the laboratory for applied geometry and topology. The main project of the laboratory was inspired by <a href="https://pubmed.ncbi.nlm.nih.gov/18974826/">paper</a> by Curto and Itskov and aimed to reconstruct topology of a room by neuronal activity of an animal.</p>
+
+<p>This task is indeed complex and is strong enough for the dedicated laboratory. The laboratory in initial form was started as educational, hence one of the first action taken by organizers was to open a recruitment of research interns. I was among the first interns selected. The laboratory also collaborated with faculty of MSU, who were responsible for experimental data.</p>
+
+<h3 id="main-problem">Main problem</h3>
+
+<p>Several words must be written about the major task.</p>
+
+<p>Assume there is a genetically modified mouse (rats were not available) walking over the room with several obstacles. During her walks, spikes of place cells of her brain happen in certain regions of the room. We can detect these spikes and, theoretically, map them to coordinates of the mouse.</p>
+
+<p>Assume that regions of coverage of single neurons are good enough to be thought of as of open disks of a fixed radius. Then as mouse moves and eventually covers all the room, these regions also cover all the room. Coverage by open disks is good in sense that all n-wise intersections of covering sets are contractible. And the room is modeled by a closed bounded set on a plane, hence is compact. Hence the conditions of the Čech theorem are satisfied. The covering is known by experimental data, hence the Čech complex is also (theoretically) known. And this is the way to the declared aim.</p>
+
+<p>There are two ways in which persistence come into play:</p>
+
+<ol>
+  <li>Spikes are not a discrete thing. Choosing different activation threshold, one can (in the model, again) vary radius of disks in the covering. This variation gives a filtration on Čech complex.</li>
+  <li>Mouse learns the room better with each step. Hence the whole map of the room in the brain changes over time.</li>
+</ol>
+
+<p>If one wants to obtain the best reliable data about the room, she should focus on both dimensions. The second is way harder to measure, so the lab focused on the first.</p>
+
+<p>I’m not sure if there are some reliable results out of this work. I know about preprint, published by <a href="https://www.hse.ru/en/org/persons/305123525">Konstantin Sorokin</a>, but I didn’t read it. But anyways, there were obstacles on the way, in particular, computational complexity of persistent homology calculation.</p>
+
+<h3 id="about-this-specific-release">About this specific release</h3>
+
+<p>As a pure math student, I was mostly out of the work with data, or at least I didn’t think about it much. But I was assigned a specific problem: explore ways to reduce dimensions of Čech complexes we work with. I was also given a hint to look at the Quillen-McCord theorem (or Quillen fiber lemma, or Quillen theorem A for posets, I’m never sure which name is best known).</p>
+
+<p>On a second year of studies, I was not skilled enough technically for the task. By the end (in May ‘20) I thought I made an advancement, i.e. a persistent version of the theorem. But at the same time I became a father and started to create my department in MCCME from scratch. I had to quit the lab, I was mentally unable to continue with the theorem, and I finally stopped to think about it.</p>
+
+<p>Two and a half years later I decided I’m ready to finish this job. Basic examination of the text convinced me the strategy was correct, but the proof was actually missing. I told Anton that there are enough changes to be made to make it a diploma wrrk, and started to rewrite it. This preprint is an important milestone, is substantially the same as my graduation thesis, and, to my current understanding, contains the theorem with the correct proof.</p>
+
+<p>The process of the work <a href="https://github.com/viviag/Approx_Quillen_McCord">is reflected</a> of Github. I find such development of everything a very good practice.</p>
+
+<p><em>I plan to present it as a poster on <a href="https://ytm2023.epfl.ch/">YTM 2023</a>. I’m glad that I came with this release before the event – now I have a text for reference in some usual place.</em></p>]]></content><author><name></name></author><category term="math-at" /><summary type="html"><![CDATA[Here it is. Below is the story and the context of this work.]]></summary></entry><entry><title type="html">Run to classifying spaces</title><link href="http://localhost:4000/blog/run-to-classifying-spaces" rel="alternate" type="text/html" title="Run to classifying spaces" /><published>2023-05-04T00:00:00+02:00</published><updated>2023-05-04T00:00:00+02:00</updated><id>http://localhost:4000/blog/run-to-classifying-spaces</id><content type="html" xml:base="http://localhost:4000/blog/run-to-classifying-spaces"><![CDATA[<p>I recently went out for a run with a friend. It quickly turned out I was not in a condition to run that run. So instead we started a walk with a conversation which eventually touched a notion of “a classifying space of a category”.</p>
 
 <p>My friend has mathematical education and is familiar with algebra, discrete optimization and real analysis, but he had never had any course in topology and does not work as a mathematician. I tried to sketch a path to the subject. At the end we agreed that an exercise sheet would support it a lot.</p>
 
@@ -973,36 +1010,4 @@ after category theory, I will try to recall all necessary definitions. I
 expect some level of mathematical culture to be comfortable with this
 series, otherwise, it may become hard to read.</p>
 
-<p>Probably someone interprets it as a sort of intro to category theory by example.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry><entry><title type="html">dbmonitor-0.1.0 released!</title><link href="http://localhost:4000/blog/dbmonitor-0-1-0-released" rel="alternate" type="text/html" title="dbmonitor-0.1.0 released!" /><published>2022-08-08T00:00:00+02:00</published><updated>2022-08-08T00:00:00+02:00</updated><id>http://localhost:4000/blog/dbmonitor-0.1.0-released</id><content type="html" xml:base="http://localhost:4000/blog/dbmonitor-0-1-0-released"><![CDATA[<p>Initial release of a tool. See
-<a href="https://hackage.haskell.org/package/dbmonitor">https://hackage.haskell.org/package/dbmonitor</a>.</p>
-
-<p>This is a database consistency monitoring tool with Telegram alerts. See
-README on <a href="https://hackage.haskell.org/package/dbmonitor">hackage</a>.</p>
-
-<p>Its most advanced feature is a hot swap of any checks and configuration
-files. Key dependencies: async, fsnotify, hasql, telegram-bot-simple.</p>
-
-<p>Several usage scenarios I have in mind:</p>
-
-<ol>
-  <li>DBA or QA engineer uses corporate vpn and has direct access to
-production or staging database from his working machine. He can
-install dbmonitor, set it up for required databases, run it
-(Unix-like systems case) via <code class="language-plaintext highlighter-rouge">dbmonitor &gt; .monitor.log &amp;</code> and add
-line <code class="language-plaintext highlighter-rouge">@reboot dbmonitor &gt; .monitor.log</code> to crontab. After that if he
-has some suspicion he can add new check and he will instantly start
-to receive alerts. It can be useful to find bugs related to
-incorrect program termination or lack of ACID guarantees.</li>
-  <li>Same setting as 1. on a local machine of responsible developer who
-want to perform long-term testing of corner cases before opening
-merge request.</li>
-  <li>In MCCME we use it on a Kubernetes pod in a docker container. Hence
-we do not use hot swap feature, but instrument still works for its
-purpose and gains persistence, however is not as convenient in usage
-as in case 1. We (credits to <a href="https://github.com/aeifn">Egor
-Kuzmichev</a>) provide docker image suitable
-for this scenario.</li>
-</ol>
-
-<p>I appreciate any feedback here and in
-<a href="https://github.com/pandora-mccme/hdbmonitor/issues">issues</a>.</p>]]></content><author><name></name></author><category term="software" /><summary type="html"><![CDATA[Initial release of a tool. See https://hackage.haskell.org/package/dbmonitor.]]></summary></entry></feed>
+<p>Probably someone interprets it as a sort of intro to category theory by example.</p>]]></content><author><name></name></author><category term="hask" /><summary type="html"><![CDATA[To index of the series]]></summary></entry></feed>
