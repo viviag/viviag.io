@@ -35,7 +35,7 @@ As a pure math student, I was mostly out of the work with data, or at least I di
 
 On a second year of studies, I was not skilled enough technically for the task. By the end (in May '20) I thought I made an advancement, i.e. a persistent version of the theorem. But at the same time I became a father and started to create my department in MCCME from scratch. I had to quit the lab, I was mentally unable to continue with the theorem, and I finally stopped to think about it.
 
-Two and a half years later I decided I'm ready to finish this job. Basic examination of the text convinced me the strategy was correct, but the proof was actually missing. I told Anton that there are enough changes to be made to make it a diploma wrrk, and started to rewrite it. This preprint is an important milestone, is substantially the same as my graduation thesis, and, to my current understanding, contains the theorem with the correct proof.
+Two and a half years later I decided I'm ready to finish this job. Basic examination of the text convinced me the strategy was correct, but the proof was actually missing. I told Anton that there are enough changes to be made to make it a diploma work, and started to rewrite it. This preprint is an important milestone, is substantially the same as my graduation thesis, and, to my current understanding, contains the theorem with the correct proof.
 
 The process of the work [is reflected](https://github.com/viviag/Approx_Quillen_McCord) of Github. I find such development of everything a very good practice.
 

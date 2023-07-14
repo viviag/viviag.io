@@ -13,16 +13,16 @@ title: Links
     trainings](https://mathtraining.ru/) and complex content management
     system for creating educational content in mathematics for Russian
     schools.
--   I study mathematics at [HSE faculty of
-    mathematics](https://math.hse.ru/en/). My advisors in chronological
-    order: [Alexey L. Gorodentsev](http://82.204.189.191/), [Anton
-    Ayzenberg](https://www.ayzenberg.xyz/), and [Andrey
-    Trepalin](https://www.hse.ru/en/org/persons/26335668).
 
 ##### Past
 
 I used to:
 
+-   study mathematics at [HSE faculty of
+    mathematics](https://math.hse.ru/en/). My advisors in chronological
+    order: [Alexey L. Gorodentsev](http://82.204.189.191/), [Anton
+    Ayzenberg](https://www.ayzenberg.xyz/), and [Andrey
+    Trepalin](https://www.hse.ru/en/org/persons/26335668).
 -   study computer science at [MSU faculty of computational mathematics
     and cybernetics](https://cs.msu.ru/en).
 -   work as software developer at [GetShop.TV](http://getshop.tv/).
@@ -48,6 +48,3 @@ I used to:
 
 -   Email: **viviag@yandex.ru**. It is highly preferrable option.
 -   [Telegram](https://t.me/viviag)
--   [LinkedIn](https://www.linkedin.com/in/vitalii-guzeev-761904b9/)
--   [Facebook](https://www.facebook.com/profile.php?id=100013454415252)
--   [VK](https://vk.com/viviag)
