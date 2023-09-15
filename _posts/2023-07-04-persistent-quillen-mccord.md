@@ -20,7 +20,7 @@ Assume there is a genetically modified mouse (rats were not available) walking o
 
 Assume that regions of coverage of single neurons are good enough to be thought of as of open disks of a fixed radius. Then as mouse moves and eventually covers all the room, these regions also cover all the room. Coverage by open disks is good in sense that all n-wise intersections of covering sets are contractible. And the room is modeled by a closed bounded set on a plane, hence is compact. Hence the conditions of the Čech theorem are satisfied. The covering is known by experimental data, hence the Čech complex is also (theoretically) known. And this is the way to the declared aim.
 
-There are two ways in which persistence come into play:
+There are two ways in which persistence comes into play:
 
 1. Spikes are not a discrete thing. Choosing different activation threshold, one can (in the model, again) vary radius of disks in the covering. This variation gives a filtration on Čech complex.
 2. Mouse learns the room better with each step. Hence the whole map of the room in the brain changes over time.
