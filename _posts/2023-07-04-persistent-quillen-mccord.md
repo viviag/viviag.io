@@ -39,4 +39,4 @@ Two and a half years later I decided I'm ready to finish this job. Basic examina
 
 The process of the work [is reflected](https://github.com/viviag/Approx_Quillen_McCord) of Github. I find such development of everything a very good practice.
 
-_I plan to present it as a poster on [YTM 2023](https://ytm2023.epfl.ch/). I'm glad that I came with this release before the event -- now I have a text for reference in some usual place._
+_The work was presented outside of HSE faculty of Mathematics for a first time as a poster at the [YTM 2023](https://ytm2023.epfl.ch/) in EPFL on July 25._
