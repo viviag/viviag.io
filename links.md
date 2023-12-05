@@ -42,6 +42,7 @@ I used to:
 -   [GitHub](https://github.com/viviag)
 -   [Hackage](https://hackage.haskell.org/user/viviag)
 -   [Arxiv](https://arxiv.org/search/?query=Vitalii+Guzeev&searchtype=all&source=header)
+-   [zbMATH](https://zbmath.org/?q=rn%3A20679)
 -   [Codewars](https://www.codewars.com/users/viviag)
 -   [Travel map](https://3pulse.com/Viviag/map)
 
