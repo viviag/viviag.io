@@ -7,7 +7,6 @@ title: Links
 
 ##### Current
 
--   I study mathematics at [SPbU faculty of mathematics and computer science](https://math-cs.spbu.ru/en/).
 -   I serve as head of software development at Hypermath project at
     [MCCME](https://mccme.ru/index-e1.html). We do
     [Hypermath](https://7.math.ru/), [Math
@@ -19,6 +18,7 @@ title: Links
 
 I used to:
 
+-   study mathematics at [SPbU faculty of mathematics and computer science](https://math-cs.spbu.ru/en/).
 -   study mathematics at [HSE faculty of
     mathematics](https://math.hse.ru/en/). My advisors in chronological
     order: [Alexey L. Gorodentsev](http://82.204.189.191/), [Anton
