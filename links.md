@@ -11,8 +11,8 @@ title: Links
     [MCCME](https://mccme.ru/index-e1.html). We do
     [Hypermath](https://7.math.ru/), [Math
     trainings](https://mathtraining.ru/) and complex content management
-    system for creating educational content in mathematics for Russian
-    schools.
+    system for creating interactive educational content in mathematics in Russian.
+    At the moment this project is supported by MIPT.
 
 ##### Past
 
