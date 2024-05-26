@@ -24,7 +24,7 @@ Please visit [links page](/links.html) of this website to see some selection of 
 
 I also welcome you in my [blog](/blog).
 I write these texts mostly in order to reflect on professional experience, polish understanding of some things or share some mathematical path.
-I do not take actions on their propagations apart from sending links to interested friends and colleagues and having an RSS feed.
+I almost do not take actions on their propagation apart from sending links to interested friends and colleagues and having an RSS feed.
 If you managed to find it and have something to say (fix me, ask me etc.), please don't hesitate to do it in [issues](https://github.com/viviag/viviag.io/issues) of the underlying Github repo or using contacts written on the [links page](/links.html).
 
 Texts here are formally [licensed](LICENSE.html). In essense – use as you wish but provide reference. I do not control propagations of these texts though, so it's a matter of politeness.

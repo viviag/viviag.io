@@ -48,5 +48,5 @@ I used to (in reverse chronological order where possible):
 
 ### Contacts
 
--   Email: **viviag@yandex.ru**. It is highly preferrable option.
+-   Email: **viviag@yandex.ru**. It is a highly preferrable option.
 -   [Telegram](https://t.me/viviag)
