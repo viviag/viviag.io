@@ -16,23 +16,23 @@ title: Links
 
 ##### Past
 
-I used to:
+I used to (in reverse chronological order where possible):
 
 -   study mathematics at [SPbU faculty of mathematics and computer science](https://math-cs.spbu.ru/en/).
+-   work as research intern at [HSE laboratory for Algebraic Topology
+    and applications](https://cs.hse.ru/en/ata-lab/) being involved into
+    theoretical work behind research on ability to recover geometry of
+    the room by activity of place cells in mouse brain.
 -   study mathematics at [HSE faculty of
     mathematics](https://math.hse.ru/en/). My advisors in chronological
     order: [Alexey L. Gorodentsev](http://82.204.189.191/), [Anton
     Ayzenberg](https://www.ayzenberg.xyz/), and [Andrey
     Trepalin](https://www.hse.ru/en/org/persons/26335668).
--   study computer science at [MSU faculty of computational mathematics
-    and cybernetics](https://cs.msu.ru/en).
 -   work as software developer at [GetShop.TV](http://getshop.tv/).
--   work as research intern at [HSE laboratory for Algebraic Topology
-    and applications](https://cs.hse.ru/en/ata-lab/) being involved into
-    theoretical work behind research on ability to recover geometry of
-    the room by activity of place cells in mouse brain.
 -   work as intern software developer at
     [SmartDec](https://smartdec.net/).
+-   study computer science at [MSU faculty of computational mathematics
+    and cybernetics](https://cs.msu.ru/en).
 -   study biology and bioinformatics at [AESC
     MSU](https://internat.msu.ru/en/). Advisor: [Oleg
     Koliasnikov](https://istina.msu.ru/profile/olkol/).
