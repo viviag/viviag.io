@@ -27,5 +27,5 @@ I write these texts mostly in order to reflect on professional experience, polis
 I almost do not take actions on their propagation apart from sending links to interested friends and colleagues and having an RSS feed.
 If you managed to find it and have something to say (fix me, ask me etc.), please don't hesitate to do it in [issues](https://github.com/viviag/viviag.io/issues) of the underlying Github repo or using contacts written on the [links page](/links.html).
 
-Texts here are formally [licensed](LICENSE.html). In essense – use as you wish but provide reference. I do not control propagations of these texts though, so it's a matter of politeness.
+Texts here are formally [licensed](LICENSE.html). In essense – use as you wish but provide reference. I do not control usage of these texts though, so it's a matter of politeness.
 **Warning**: I edit everything here, any post can be seriously changed over time as I my views update. If you want to refer to specific fixed version, please refer with respect to [commit history](https://github.com/viviag/viviag.io/commits/main).
