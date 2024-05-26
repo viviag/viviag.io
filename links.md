@@ -12,7 +12,7 @@ title: Links
     [Hypermath](https://7.math.ru/), [Math
     trainings](https://mathtraining.ru/) and complex content management
     system for creating interactive educational content in mathematics in Russian.
-    At the moment this project is supported by MIPT.
+    At the moment this project is supported by [MIPT](https://mipt.ru/en).
 
 ##### Past
 
