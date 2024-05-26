@@ -6,7 +6,7 @@ title: About
 This is my personal site, focused on my professional and close to professional activity.
 
 I used to study biology, software engineering and mathematics. Mostly the last.
-I work as engineering manager/software architect and try to keep my mathematical skills updated and myself capable to read papers in fields of my interest.
+I work as engineering manager/software architect and try to maintain my mathematical skills and ability to read papers in fields of my interest.
 I remember some biology on a level of good general culture with some more deep parts.
 
 My current interests intersect with:
