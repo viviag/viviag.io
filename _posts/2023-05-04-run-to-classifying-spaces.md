@@ -66,6 +66,7 @@ Denote a category by $$\mathcal{C}$$. Geometric realization of its nerve $$B\mat
 
 __Exercise__: Construct a simplicial decomposition of a circle such that is has two simplices of each dimensions.<br>
 __Exercise__: Construct a simplicial decomposition of a sphere such that is has two simplices of each dimensions.<br>
+__Exercise__: Classifying space of the category 2. is a simplical decomposition of infinite-dimensional real projective space (space of lines intersecting the origin in $$\mathbb{R}^n$$).
 
 ## Topology: homeomorphisms and cellular complexes
 
