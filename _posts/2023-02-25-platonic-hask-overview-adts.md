@@ -69,7 +69,7 @@ Distributivity gives us equation $$a \cdot (b + c) = a \cdot b + a \cdot c$$.
 
 **Proposition:** For any object $$a$$ $$0 \cdot a = 0$$. I.e. $$0 \cdot a$$ is an initial object.
 
-**Proof:** Consider $$\operatorname{Hom}(0 \cdot a, b)$$ for some $$b$$. It is non-empty due to existence of the unique composition $$0 \cdot a \xrightarrow{\pi_0} \to b$$. Let $$f, g \in \operatorname{Hom}(0 \cdot a, b)$$. Consider $$(0 \cdot a) + (0 \cdot a) = (0 + 0) \cdot a = 0 \cdot a$$. There is a unique morphism from $$0$$ to $$0$$, hence inclusions $$i_1$$ and $$i_2$$ to the left and right summands coincide. Consider $$f + g : (0 \cdot a) + (0 \cdot a) \to b + b$$. Compositions $$(f + g) . i_1$$ and $(f + g) . i_2$ are equal as $b + 0 = 0 + b$. But $$(f + g) . i_1$ = f + 0 = f$ and $$(f + g) . i_2 = 0 + g = g$$.
+**Proof:** Consider $$\operatorname{Hom}(0 \cdot a, b)$$ for some $$b$$. It is non-empty due to existence of the unique composition $$0 \cdot a \xrightarrow{\pi_0} 0 \to b$$. Let $$f, g \in \operatorname{Hom}(0 \cdot a, b)$$. Consider $$(0 \cdot a) + (0 \cdot a) = (0 + 0) \cdot a = 0 \cdot a$$. There is a unique morphism from $$0$$ to $$0$$, hence inclusions $$i_1$$ and $$i_2$$ to the left and right summands coincide. Consider $$f + g : (0 \cdot a) + (0 \cdot a) \to b + b$$. Compositions $$(f + g) . i_1$$ and $$(f + g) . i_2$$ are equal as $$b + 0 = 0 + b$$. But $$(f + g) . i_1$$ = $$f + 0 = f$$ and $$(f + g) . i_2 = 0 + g = g$$.
 
 Reference: [ncatlab: Proposition 2.2](https://ncatlab.org/nlab/show/distributive+category).
 
