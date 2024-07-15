@@ -13,7 +13,7 @@ Some of them and whose they taught will use these skills outside of the tourname
 
 Assume you work on a big project. "Big" here means that it has several local packages with dependencies between them in a single repository. You have a build tool which can build the given set of packages or the whole project. In our case, the tool is [Stack](https://docs.haskellstack.org/en/stable/) and the packages are a set of packages grouped under the same global configuration file (`stack.yaml`).
 
-You also have a continuous integration set up. So you commit, system builds the code, deploy new executables to registry in a convenient form and then some tool look the registry updates up and deploy them to the applications cluster.
+You also have a continuous integration set up. So you commit, system builds the code, deploys new executables to registry in a convenient form and then some tool look the registry updates up and deploy them to the applications cluster.
 
 Packages are very different. Some of them are libraries. Some of them are stateful services. For these either some persistence should be designed or we have to accept that each restart leads to loss of the state. Some of them are high-throughput services. Restart of them under load may cause different types of troubles --- sudden bottleneck while scaling replicas `n \to 1 \to n`, episodes of inconsistent behavior under some circumstances etc.
 
