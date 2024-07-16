@@ -26,8 +26,8 @@ I used to (in reverse chronological order where possible):
 -   study mathematics at [HSE faculty of
     mathematics](https://math.hse.ru/en/). My advisors in chronological
     order: [Alexey L. Gorodentsev](http://82.204.189.191/), [Anton
-    Ayzenberg](https://www.ayzenberg.xyz/), and [Andrey
-    Trepalin](https://www.hse.ru/en/org/persons/26335668).
+    Ayzenberg](https://www.ayzenberg.xyz/), [Andrey
+    Trepalin](https://zbmath.org/authors/?q=au%3A%22andrey%20trepalin%22%20%7C%20au%3A%22trepalin%2C%20andrey%22%20%7C%20au%3A%22trepalin%2C%20a%2A%20s%2A%22), and Anton Ayzenberg again as diploma advisor.
 -   work as software developer at [GetShop.TV](http://getshop.tv/).
 -   work as intern software developer at
     [SmartDec](https://smartdec.net/).
