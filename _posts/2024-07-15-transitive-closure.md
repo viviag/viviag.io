@@ -60,7 +60,7 @@ That's it. For a long explanation based on algorithmic training there are plenty
 
 #### P.S.
 
-The solution was designed under impression that Stack always rebuilds all the executables if `stack build` is called without specific targets. As [Mike Pilgrem](https://github.com/mpilgrem) [explains](https://github.com/commercialhaskell/stack/issues/6622#issuecomment-2227093821) to me, it is not true, so the problem is almost solvable by tracking the `last_modified` property of binaries coming from the build and from the build cache. His solution applied to my setting has the only one failure point --- if the build cache on CI is unavailable, the procedure will redeploy everything. In-house implementation of the transitive closure algorithm does not depend on specific build properties. I guess we will deploy this solution.
+The solution was designed under impression that Stack always rebuilds all the executables if `stack build` is called without specific targets. As [Mike Pilgrem](https://github.com/mpilgrem) [explains](https://github.com/commercialhaskell/stack/issues/6622#issuecomment-2227093821) to me, it is not true, so the problem is almost solvable by tracking the `last_modified` property of binaries coming from the build and from the build cache. His solution applied to my setting has the only one failure point --- if the build cache on CI is unavailable, the procedure will redeploy everything. In-house implementation of the transitive closure algorithm does not depend on specific build properties. The optimal solution differs a bit, but does not involve custom code also.
 
 #### P.P.S.
 
