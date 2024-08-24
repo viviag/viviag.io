@@ -16,15 +16,15 @@ We can construct a pair $$F = (F_{\operatorname{Ob}}, F_{\operatorname{Hom}})$$.
 
 ##### Definitions
 
-$$F$$ is called a **covariant functor** or **functor** if the following
-diagram commutes:
+$$F$$ is called a **covariant functor** or **functor** if the following holds:
 
-![functor](/assets/functor.svg)
+1. $$F_{\operatorname{Hom}}(Id_A) = Id_{F_{\operatorname{Ob}A}}$$;
+2. $$F_{\operatorname{Hom}}(f \circ g) = F_{\operatorname{Hom}}(f) \circ F_{\operatorname{Hom}}(g)$$.
 
-or a **contravariant functor** if the following diagram
-commutes:
+Or a **contravariant functor** if the following holds:
 
-![functor](/assets/cofunctor.svg)
+1. Same as above;
+2. $$F_{\operatorname{Hom}}(f \circ g) = F_{\operatorname{Hom}}(g) \circ F_{\operatorname{Hom}}(f)$$.
 
 Here are several useful definitions:
 
